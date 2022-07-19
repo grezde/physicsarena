@@ -1,0 +1,25 @@
+<root>
+    <ul class="oly oly-${ol}">
+        <list from="root" elem="yr">
+            <li class="year-container year-container-{yr.year}">
+                <h1 class="year-title year-title-{yr.year}">{yr.year}</h1>
+                <img class="country-image country-image-{yr.year}" height="20" src="https://countryflagsapi.com/png/{yr.country}" />
+                <h1 class="country-image country-{yr.year}">{yr.country}</h1>
+                <conditional obj="yr" prop="website">
+                    <a href="{yr.website}">Website</a>
+                </conditional>
+                <ul class="problems-container">
+                <list from="yr" elem="pr">
+                    <li class="problems-list">    
+                        <h2 class="problem-title problem-title-{yr.year}-{pr.id}">{pr.title}</h2>
+                        <p>{pr.topics}</p>
+                        <conditional obj="pr" prop="desc">
+                            <p>{pr.desc}</p>
+                        </conditional>
+                    </li>
+                </list>
+                </ul>
+            </li>
+        </list>
+    </ul>
+</root>
