@@ -1,5 +1,5 @@
 #!/bin/node
-const { readOLE } = require('./readOL');
+const { readOLE, readFile } = require('./readOL');
 const { writeHTMLFromPdata } = require('./genHTML');
 
 const ms = readOLE('manifest', 'manifest', {
@@ -16,16 +16,33 @@ const ms = readOLE('manifest', 'manifest', {
     }
 });
 
-const pdatas = [];
+let pdatas = [], locales={};
 for(let ol of ms)
     for(let ex of ol.exams)
-        pdatas.push(...ex.locales.split(' ').map(loc => ({
-            ol: ol.name,
-            exam: ex.code,
-            loc: loc,
-            hasGrade: !!+ol.hasGrade,
-            plevel: +ol.plevel
-        })));
+        for(let loc of ex.locales.split(' ')) {
+            locales[loc] = true;
+            pdatas.push({
+                ol: ol.name,
+                exam: ex.code,
+                loc: loc,
+                hasGrade: !!+ol.hasGrade,
+                plevel: +ol.plevel
+            });
+        }
+for(let l in locales) {
+    locales[l] = {};
+    const lines = readFile('manifest', `lang-${l}`).split('\n');
+    for(let line of lines) {
+        if(line[0] == '#')
+            continue;
+        let s = line.split('=');
+        if(s.length == 2)
+            locales[l][s[0]] = s[1];
+    }
+}
+pdatas = pdatas.map(p => ({ ...p, lmap: locales[p.loc] }));
 
 for(let p of pdatas)
     writeHTMLFromPdata(p, ms);
+    
+console.log("Written all files");

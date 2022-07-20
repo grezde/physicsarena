@@ -4,7 +4,7 @@ ipho:
     -p 0
     -g 0
     -e th
-    -l en
+    -l en ro
 
 apho:
     -d APhO
