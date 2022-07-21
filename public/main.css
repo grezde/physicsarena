@@ -5,12 +5,20 @@
 }
 
 body {
-    background-color: black;
-    color: rgb(164, 164, 164);
+    background-color: rgb(253, 250, 236);
 }
 
 a {
     text-decoration: none;
+}
+
+a, a:visited {
+    color: #0000ff;
+    transition: color 0.1s ease-in-out;
+}
+
+a:active, a:hover {
+    color: #006aff
 }
 
 .country-image {
@@ -32,7 +40,7 @@ a {
 }
 
 .year-container {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 #container {
@@ -113,7 +121,7 @@ a {
 }
 
 nav {
-    background-color:rgb(24, 30, 51);
+    background-color:rgb(213, 218, 236);
     border-bottom: 1px solid rgb(113, 113, 113);
     padding: 5px 20px 8px 20px;
 }
@@ -122,22 +130,22 @@ nav p, nav h1 {
     display: inline-block;
 }
 
-nav {
+#top {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
 }
 
-nav .center {
+#top .center {
     flex-grow: 10;
 }
 
-nav h1 {
+#top h1 {
     margin-right: 10px;
 }
 
-nav p {
-    margin: 0 1.5px;
+#top p {
+    margin: 0 3px;
 }
 
 nav .separator {
@@ -148,11 +156,19 @@ nav .separator {
     border-radius: 6px;
 }
 
-nav .right h1 {
+#top h1 {
     color: rgb(24, 30, 51);
     -webkit-user-select: none; /* Safari */        
     -moz-user-select: none; /* Firefox */
     -ms-user-select: none; /* IE10+/Edge */
     user-select: none; /* Standard */
+}
 
+#bot {
+    padding-top: 12px;
+    overflow-x: scroll;
+}
+
+#bot p {
+    margin: 0 1.5px;
 }

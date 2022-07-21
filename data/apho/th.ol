@@ -1,123 +1,123 @@
 2019:
-	-c Australia
+	-c AUS
 	-w https://apho2019.asi.edu.au
 	-t circ
 	-t rel mag
 	-t mech
 
 2018:
-	-c Vietnam
+	-c VNM
 	-w https://apho2018.vn
 	-t mag quantum
 	-t grav mech
 	-t thermo circ waves
 
 2017:
-	-c Russia
+	-c RUS
 	-w https://apho2017.mipt.ru
 	-t fluid
 	-t grav
 	-t mech mag
 
 2016:
-	-c Hong Kong
+	-c HKG
 	-w http://apho2016.ust.hk/index.php
 	-t grav
 	-t grav other
 	-t mag quantum
 
 2015:
-	-c China
+	-c CHN
 	-t mag quantum other
 	-t mag thermo
 	-t opt quantum
 
 2014:
-	-c Singapore
+	-c SGP
 	-t thermo
 	-t elec opt
 	-t other
 
 2013:
-	-c Indonezia
+	-c IDN
 	-t elec
 	-t rel
 	-t quantum mag
 
 2012:
-	-c India
+	-c IND
 	-t mag mech
 	-t other
 	-t opt waves
 
 2011:
-	-c Israel
+	-c ISR
 	-t mag rel
 	-t mech osc
 	-t thermo
 
 2010:
-	-c Taiwan
+	-c TWN
 	-t mech waves
 	-t mag waves
 	-t quantum thermo
 
 2009:
-	-c Thailand
+	-c THA
 	-t mech osc
 	-t mag
 	-t fluid thermo
 
 2008:
-	-c Mongolia
+	-c MNG
 	-t thermo fluid
 	-t elec nuc
 	-t rel
 
 2007:
-	-c China
+	-c CHN
 	-t mech
 	-t opt elec
 	-t thermo quantum
 
 2006:
-	-c Kazakhstan
+	-c KAZ
 	-t quantum other
 	-t osc mech
 	-t thermo elec opt
 
 2005:
-	-c Indonesia
+	-c IDN
 	-t thermo mech osc
 	-t mag
 	-t rel opt
 
 2004:
-	-c Vietnam
+	-c VNM
 	-t osc
 	-t opt
 	-t thermo osc
 
 2003:
-	-c Thailand
+	-c THA
 	-t grav
 	-t opt
 	-t mag
 
 2002:
-	-c Singapore
+	-c SGP
 	-t waves quantum
 	-t mag
 	-t thermo
 
 2001:
-	-c Taiwan
+	-c TWN
 	-t grav
 	-t mag
 	-t waves other
 
 2000:
-	-c Indonesia
+	-c IDN
 	-t grav
 	-t nuc
 	-t mag
