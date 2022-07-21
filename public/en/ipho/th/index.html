@@ -5,7 +5,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>IPhO Problems - physicsarena</title>
+        <title>Probleme IPhO - fizicarena</title>
         <link rel="stylesheet" href="/public/main.css" />
         <!-- This page was generated from raw olympiad data -->
     </head>
@@ -13,50 +13,88 @@
         <nav id="top">
             <h1>physicsarena</h1>
             <div class="center"></div>
-            <p>Language</p>
-            <p>en</p>
+            <p>Limbă</p>
+            <p>
+                <img class="language-image" height="14" src="/public/images/c-en.png" /> 
+            </p>
             
-            <p><a href="/public/ro/ipho/th">ro</a></p>
+                <p><a href="/public/ro/ipho/th">
+                    <img class="language-image" height="14" src="https://countryflagsapi.com/png/ro" /> 
+                </a></p>
             
             <p class="separator"></p>
-            <p>Filter</p>
-            <p>Options</p>
+            <p>Filtre</p>
+            <p><a class="a-button" id="options-button">Opțiuni</a></p>
         </nav>
         <nav id="bot">
-            <p>IPhO Problems - physicsarena</p>
+            <p>Probleme IPhO</p>
             <p>-</p>
-            <p>Theoretical Exam</p>
-            <p class="separator"></p>
+            <p>Proba Teoretică</p>
             
-            <p><a href="/public/en/ipho/ex">Practical</a></p>
             <p> </p>
             <p class="separator"></p>
             
-            <p><a href="/public/en/apho/th">APhO</a></p>
+                <p><a href="/public/en/apho/th">APhO</a></p>
             
-            <p><a href="/public/en/eupho/th">EuPhO</a></p>
+                <p><a href="/public/en/eupho/th">EuPhO</a></p>
             
-            <p><a href="/public/en/rmph/th">RMPh</a></p>
+                <p><a href="/public/en/rmph/th">RMPh</a></p>
             
         </nav>
+        <div class="component" id="options-component">
+            <h3>Options</h3>
+            <form id="options-form">
+                
+        <input type="checkbox" id="options-flags" name="flags" />
+        <label for="flags">Hide organizer flags</label>
+        <br />
+    
+        <input type="checkbox" id="options-cname" name="cname" />
+        <label for="cname">Hide organizer name</label>
+        <br />
+    
+        <input type="checkbox" id="options-website" name="website" />
+        <label for="website">Hide website</label>
+        <br />
+    
+        <input type="checkbox" id="options-topics" name="topics" />
+        <label for="topics">Hide topics</label>
+        <br />
+    
+        <input type="checkbox" id="options-desc" name="desc" />
+        <label for="desc">Hide descriptions</label>
+        <br />
+    
+        <input type="checkbox" id="options-name" name="name" />
+        <label for="name">Hide problem name</label>
+        <br />
+    
+        <input type="checkbox" id="options-dark" name="dark" />
+        <label for="dark">Dark mode</label>
+        <br />
+    
+                <input type="Submit" class="submit-button" value="Submit" />
+                <input type="Submit" class="hide-button" value="Back" />
+            </form>
+        </div>
         <div id="container">
             
         <ul class="oly oly-ipho">
         
             <li class="year-container year-container-2019">
-                <h1 class="year-title year-title-2019">2019</h1>
+                <h1 class="year-title">2019</h1>
                 
-                    <img class="country-image country-image-2019" height="17" src="https://countryflagsapi.com/png/ISR" />
+                    <img class="country-image" height="17" src="https://countryflagsapi.com/png/isr" />
                 
-                    <h3 class="country-name country-2019">
+                    <h3 class="country-name">
                         <span>
-                            ISR
+                            Israel
                         </span>
                     </h3>
                 
 
                 
-                    <p class="year-website year-website-2019"><a target="_blank" href="https://www.ipho2019.org.il">Website</a></p>
+                    <p class="year-website"><a target="_blank" href="https://www.ipho2019.org.il">Website</a></p>
                 
 
                 <ul class="problems-container">
@@ -64,14 +102,14 @@
             <li class="problem-container">    
                 <h3 class="problem-title problem-title-2019-1">Springs and Slinky</h3>
                 
-                    <h4 class="problem-links problem-links-2019-1">
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2019-1-p.pdf">Problem</a></span>
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2019-1-s.pdf">Solution</a></span>
-                    </h4>
-                
+            <h4 class="problem-links">
+                <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2019-1-p.pdf">Probleme</a></span>
+                <span class="problem-link-s"><a target="_blank" href="/files/en/ipho/th/2019-1-s.pdf">Soluții</a></span>
+            </h4>
+        
                 <p class="problem-topics problem-topics-2019-1">
                     
-                            <span class="problem-topic topic-mech">Mechanics</span> 
+                            <span class="problem-topic topic-mech">Mecanică</span> 
                         
                 </p>
                 
@@ -81,11 +119,11 @@
             <li class="problem-container">    
                 <h3 class="problem-title problem-title-2019-2">Physics of Microwave Oven</h3>
                 
-                    <h4 class="problem-links problem-links-2019-2">
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2019-2-p.pdf">Problem</a></span>
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2019-2-s.pdf">Solution</a></span>
-                    </h4>
-                
+            <h4 class="problem-links">
+                <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2019-2-p.pdf">Probleme</a></span>
+                <span class="problem-link-s"><a target="_blank" href="/files/en/ipho/th/2019-2-s.pdf">Soluții</a></span>
+            </h4>
+        
                 <p class="problem-topics problem-topics-2019-2">
                     
                             <span class="problem-topic topic-mag">Magnetism</span> 
@@ -97,16 +135,16 @@
             <li class="problem-container">    
                 <h3 class="problem-title problem-title-2019-3">Thermoacoustic Engine</h3>
                 
-                    <h4 class="problem-links problem-links-2019-3">
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2019-3-p.pdf">Problem</a></span>
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2019-3-s.pdf">Solution</a></span>
-                    </h4>
-                
+            <h4 class="problem-links">
+                <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2019-3-p.pdf">Probleme</a></span>
+                <span class="problem-link-s"><a target="_blank" href="/files/en/ipho/th/2019-3-s.pdf">Soluții</a></span>
+            </h4>
+        
                 <p class="problem-topics problem-topics-2019-3">
                     
-                            <span class="problem-topic topic-thermo">Thermo.</span> 
+                            <span class="problem-topic topic-thermo">Termo.</span> 
                         
-                            <span class="problem-topic topic-waves">Waves</span> 
+                            <span class="problem-topic topic-waves">Unde</span> 
                         
                 </p>
                 
@@ -116,19 +154,19 @@
             </li>
         
             <li class="year-container year-container-2018">
-                <h1 class="year-title year-title-2018">2018</h1>
+                <h1 class="year-title">2018</h1>
                 
-                    <img class="country-image country-image-2018" height="17" src="https://countryflagsapi.com/png/PRT" />
+                    <img class="country-image" height="17" src="https://countryflagsapi.com/png/prt" />
                 
-                    <h3 class="country-name country-2018">
+                    <h3 class="country-name">
                         <span>
-                            PRT
+                            Portugalia
                         </span>
                     </h3>
                 
 
                 
-                    <p class="year-website year-website-2018"><a target="_blank" href="https://ipho2018.pt">Website</a></p>
+                    <p class="year-website"><a target="_blank" href="https://ipho2018.pt">Website</a></p>
                 
 
                 <ul class="problems-container">
@@ -136,16 +174,16 @@
             <li class="problem-container">    
                 <h3 class="problem-title problem-title-2018-1">LIGO</h3>
                 
-                    <h4 class="problem-links problem-links-2018-1">
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2018-1-p.pdf">Problem</a></span>
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2018-1-s.pdf">Solution</a></span>
-                    </h4>
-                
+            <h4 class="problem-links">
+                <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2018-1-p.pdf">Probleme</a></span>
+                <span class="problem-link-s"><a target="_blank" href="/files/en/ipho/th/2018-1-s.pdf">Soluții</a></span>
+            </h4>
+        
                 <p class="problem-topics problem-topics-2018-1">
                     
-                            <span class="problem-topic topic-grav">Gravity</span> 
+                            <span class="problem-topic topic-grav">Gravitație</span> 
                         
-                            <span class="problem-topic topic-other">Other</span> 
+                            <span class="problem-topic topic-other">Altele</span> 
                         
                 </p>
                 
@@ -154,16 +192,16 @@
             <li class="problem-container">    
                 <h3 class="problem-title problem-title-2018-2">Where is Neutrino</h3>
                 
-                    <h4 class="problem-links problem-links-2018-2">
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2018-2-p.pdf">Problem</a></span>
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2018-2-s.pdf">Solution</a></span>
-                    </h4>
-                
+            <h4 class="problem-links">
+                <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2018-2-p.pdf">Probleme</a></span>
+                <span class="problem-link-s"><a target="_blank" href="/files/en/ipho/th/2018-2-s.pdf">Soluții</a></span>
+            </h4>
+        
                 <p class="problem-topics problem-topics-2018-2">
                     
-                            <span class="problem-topic topic-thermo">Thermo.</span> 
+                            <span class="problem-topic topic-thermo">Termo.</span> 
                         
-                            <span class="problem-topic topic-quantum">Quantum</span> 
+                            <span class="problem-topic topic-quantum">Cuantică</span> 
                         
                 </p>
                 
@@ -173,16 +211,16 @@
             <li class="problem-container">    
                 <h3 class="problem-title problem-title-2018-3">Physics of Live Systems</h3>
                 
-                    <h4 class="problem-links problem-links-2018-3">
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2018-3-p.pdf">Problem</a></span>
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2018-3-s.pdf">Solution</a></span>
-                    </h4>
-                
+            <h4 class="problem-links">
+                <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2018-3-p.pdf">Probleme</a></span>
+                <span class="problem-link-s"><a target="_blank" href="/files/en/ipho/th/2018-3-s.pdf">Soluții</a></span>
+            </h4>
+        
                 <p class="problem-topics problem-topics-2018-3">
                     
-                            <span class="problem-topic topic-fluid">Fluids</span> 
+                            <span class="problem-topic topic-fluid">Fluide</span> 
                         
-                            <span class="problem-topic topic-circ">Circuits</span> 
+                            <span class="problem-topic topic-circ">Circuite</span> 
                         
                 </p>
                 
@@ -192,19 +230,19 @@
             </li>
         
             <li class="year-container year-container-2017">
-                <h1 class="year-title year-title-2017">2017</h1>
+                <h1 class="year-title">2017</h1>
                 
-                    <img class="country-image country-image-2017" height="17" src="https://countryflagsapi.com/png/IDN" />
+                    <img class="country-image" height="17" src="https://countryflagsapi.com/png/idn" />
                 
-                    <h3 class="country-name country-2017">
+                    <h3 class="country-name">
                         <span>
-                            IDN
+                            Indonezia
                         </span>
                     </h3>
                 
 
                 
-                    <p class="year-website year-website-2017"><a target="_blank" href="https://www.facebook.com/ipho2017/">Website</a></p>
+                    <p class="year-website"><a target="_blank" href="https://www.facebook.com/ipho2017/">Website</a></p>
                 
 
                 <ul class="problems-container">
@@ -212,14 +250,14 @@
             <li class="problem-container">    
                 <h3 class="problem-title problem-title-2017-1">Dark Matter</h3>
                 
-                    <h4 class="problem-links problem-links-2017-1">
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2017-1-p.pdf">Problem</a></span>
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2017-1-s.pdf">Solution</a></span>
-                    </h4>
-                
+            <h4 class="problem-links">
+                <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2017-1-p.pdf">Probleme</a></span>
+                <span class="problem-link-s"><a target="_blank" href="/files/en/ipho/th/2017-1-s.pdf">Soluții</a></span>
+            </h4>
+        
                 <p class="problem-topics problem-topics-2017-1">
                     
-                            <span class="problem-topic topic-grav">Gravity</span> 
+                            <span class="problem-topic topic-grav">Gravitație</span> 
                         
                 </p>
                 
@@ -228,14 +266,14 @@
             <li class="problem-container">    
                 <h3 class="problem-title problem-title-2017-2">Earthquake Volcano Tsunami</h3>
                 
-                    <h4 class="problem-links problem-links-2017-2">
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2017-2-p.pdf">Problem</a></span>
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2017-2-s.pdf">Solution</a></span>
-                    </h4>
-                
+            <h4 class="problem-links">
+                <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2017-2-p.pdf">Probleme</a></span>
+                <span class="problem-link-s"><a target="_blank" href="/files/en/ipho/th/2017-2-s.pdf">Soluții</a></span>
+            </h4>
+        
                 <p class="problem-topics problem-topics-2017-2">
                     
-                            <span class="problem-topic topic-other">Other</span> 
+                            <span class="problem-topic topic-other">Altele</span> 
                         
                 </p>
                 
@@ -244,16 +282,16 @@
             <li class="problem-container">    
                 <h3 class="problem-title problem-title-2017-3">Cosmic inflation</h3>
                 
-                    <h4 class="problem-links problem-links-2017-3">
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2017-3-p.pdf">Problem</a></span>
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2017-3-s.pdf">Solution</a></span>
-                    </h4>
-                
+            <h4 class="problem-links">
+                <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2017-3-p.pdf">Probleme</a></span>
+                <span class="problem-link-s"><a target="_blank" href="/files/en/ipho/th/2017-3-s.pdf">Soluții</a></span>
+            </h4>
+        
                 <p class="problem-topics problem-topics-2017-3">
                     
-                            <span class="problem-topic topic-grav">Gravity</span> 
+                            <span class="problem-topic topic-grav">Gravitație</span> 
                         
-                            <span class="problem-topic topic-other">Other</span> 
+                            <span class="problem-topic topic-other">Altele</span> 
                         
                 </p>
                 
@@ -263,19 +301,19 @@
             </li>
         
             <li class="year-container year-container-2016">
-                <h1 class="year-title year-title-2016">2016</h1>
+                <h1 class="year-title">2016</h1>
                 
-                    <img class="country-image country-image-2016" height="17" src="https://countryflagsapi.com/png/CHE" />
+                    <img class="country-image" height="17" src="https://countryflagsapi.com/png/che" />
                 
-                    <h3 class="country-name country-2016">
+                    <h3 class="country-name">
                         <span>
-                            CHE
+                            Elveția
                         </span>
                     </h3>
                 
 
                 
-                    <p class="year-website year-website-2016"><a target="_blank" href="https://science.olympiad.ch/en/ipho2016/?lan=en">Website</a></p>
+                    <p class="year-website"><a target="_blank" href="https://science.olympiad.ch/en/ipho2016/?lan=en">Website</a></p>
                 
 
                 <ul class="problems-container">
@@ -283,14 +321,14 @@
             <li class="problem-container">    
                 <h3 class="problem-title problem-title-2016-1">Two Problems in Mechanics</h3>
                 
-                    <h4 class="problem-links problem-links-2016-1">
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2016-1-p.pdf">Problem</a></span>
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2016-1-s.pdf">Solution</a></span>
-                    </h4>
-                
+            <h4 class="problem-links">
+                <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2016-1-p.pdf">Probleme</a></span>
+                <span class="problem-link-s"><a target="_blank" href="/files/en/ipho/th/2016-1-s.pdf">Soluții</a></span>
+            </h4>
+        
                 <p class="problem-topics problem-topics-2016-1">
                     
-                            <span class="problem-topic topic-mech">Mechanics</span> 
+                            <span class="problem-topic topic-mech">Mecanică</span> 
                         
                 </p>
                 
@@ -299,14 +337,14 @@
             <li class="problem-container">    
                 <h3 class="problem-title problem-title-2016-2">Nonlin. Dynamics in El-Circ.</h3>
                 
-                    <h4 class="problem-links problem-links-2016-2">
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2016-2-p.pdf">Problem</a></span>
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2016-2-s.pdf">Solution</a></span>
-                    </h4>
-                
+            <h4 class="problem-links">
+                <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2016-2-p.pdf">Probleme</a></span>
+                <span class="problem-link-s"><a target="_blank" href="/files/en/ipho/th/2016-2-s.pdf">Soluții</a></span>
+            </h4>
+        
                 <p class="problem-topics problem-topics-2016-2">
                     
-                            <span class="problem-topic topic-circ">Circuits</span> 
+                            <span class="problem-topic topic-circ">Circuite</span> 
                         
                 </p>
                 
@@ -316,14 +354,14 @@
             <li class="problem-container">    
                 <h3 class="problem-title problem-title-2016-3">Large Hadron Collider</h3>
                 
-                    <h4 class="problem-links problem-links-2016-3">
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2016-3-p.pdf">Problem</a></span>
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2016-3-s.pdf">Solution</a></span>
-                    </h4>
-                
+            <h4 class="problem-links">
+                <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2016-3-p.pdf">Probleme</a></span>
+                <span class="problem-link-s"><a target="_blank" href="/files/en/ipho/th/2016-3-s.pdf">Soluții</a></span>
+            </h4>
+        
                 <p class="problem-topics problem-topics-2016-3">
                     
-                            <span class="problem-topic topic-rel">Relativity</span> 
+                            <span class="problem-topic topic-rel">Relativitate</span> 
                         
                             <span class="problem-topic topic-mag">Magnetism</span> 
                         
@@ -336,19 +374,19 @@
             </li>
         
             <li class="year-container year-container-2015">
-                <h1 class="year-title year-title-2015">2015</h1>
+                <h1 class="year-title">2015</h1>
                 
-                    <img class="country-image country-image-2015" height="17" src="https://countryflagsapi.com/png/IND" />
+                    <img class="country-image" height="17" src="https://countryflagsapi.com/png/ind" />
                 
-                    <h3 class="country-name country-2015">
+                    <h3 class="country-name">
                         <span>
-                            IND
+                            India
                         </span>
                     </h3>
                 
 
                 
-                    <p class="year-website year-website-2015"><a target="_blank" href="http://www.ipho2015.in">Website</a></p>
+                    <p class="year-website"><a target="_blank" href="http://www.ipho2015.in">Website</a></p>
                 
 
                 <ul class="problems-container">
@@ -356,16 +394,16 @@
             <li class="problem-container">    
                 <h3 class="problem-title problem-title-2015-1">Particles from Sun</h3>
                 
-                    <h4 class="problem-links problem-links-2015-1">
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2015-1-p.pdf">Problem</a></span>
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2015-1-s.pdf">Solution</a></span>
-                    </h4>
-                
+            <h4 class="problem-links">
+                <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2015-1-p.pdf">Probleme</a></span>
+                <span class="problem-link-s"><a target="_blank" href="/files/en/ipho/th/2015-1-s.pdf">Soluții</a></span>
+            </h4>
+        
                 <p class="problem-topics problem-topics-2015-1">
                     
-                            <span class="problem-topic topic-nuc">Nuclear</span> 
+                            <span class="problem-topic topic-nuc">Nucleară</span> 
                         
-                            <span class="problem-topic topic-thermo">Thermo.</span> 
+                            <span class="problem-topic topic-thermo">Termo.</span> 
                         
                 </p>
                 
@@ -374,18 +412,18 @@
             <li class="problem-container">    
                 <h3 class="problem-title problem-title-2015-2">Extremum Principle</h3>
                 
-                    <h4 class="problem-links problem-links-2015-2">
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2015-2-p.pdf">Problem</a></span>
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2015-2-s.pdf">Solution</a></span>
-                    </h4>
-                
+            <h4 class="problem-links">
+                <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2015-2-p.pdf">Probleme</a></span>
+                <span class="problem-link-s"><a target="_blank" href="/files/en/ipho/th/2015-2-s.pdf">Soluții</a></span>
+            </h4>
+        
                 <p class="problem-topics problem-topics-2015-2">
                     
-                            <span class="problem-topic topic-mech">Mechanics</span> 
+                            <span class="problem-topic topic-mech">Mecanică</span> 
                         
-                            <span class="problem-topic topic-quantum">Quantum</span> 
+                            <span class="problem-topic topic-quantum">Cuantică</span> 
                         
-                            <span class="problem-topic topic-opt">Optics</span> 
+                            <span class="problem-topic topic-opt">Optică</span> 
                         
                 </p>
                 
@@ -394,14 +432,14 @@
             <li class="problem-container">    
                 <h3 class="problem-title problem-title-2015-3">Nuclear Reactor</h3>
                 
-                    <h4 class="problem-links problem-links-2015-3">
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2015-3-p.pdf">Problem</a></span>
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2015-3-s.pdf">Solution</a></span>
-                    </h4>
-                
+            <h4 class="problem-links">
+                <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2015-3-p.pdf">Probleme</a></span>
+                <span class="problem-link-s"><a target="_blank" href="/files/en/ipho/th/2015-3-s.pdf">Soluții</a></span>
+            </h4>
+        
                 <p class="problem-topics problem-topics-2015-3">
                     
-                            <span class="problem-topic topic-nuc">Nuclear</span> 
+                            <span class="problem-topic topic-nuc">Nucleară</span> 
                         
                 </p>
                 
@@ -411,13 +449,13 @@
             </li>
         
             <li class="year-container year-container-2014">
-                <h1 class="year-title year-title-2014">2014</h1>
+                <h1 class="year-title">2014</h1>
                 
-                    <img class="country-image country-image-2014" height="17" src="https://countryflagsapi.com/png/KAZ" />
+                    <img class="country-image" height="17" src="https://countryflagsapi.com/png/kaz" />
                 
-                    <h3 class="country-name country-2014">
+                    <h3 class="country-name">
                         <span>
-                            KAZ
+                            Kazakhstan
                         </span>
                     </h3>
                 
@@ -430,18 +468,18 @@
             <li class="problem-container">    
                 <h3 class="problem-title problem-title-2014-1">Three Problems</h3>
                 
-                    <h4 class="problem-links problem-links-2014-1">
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2014-1-p.pdf">Problem</a></span>
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2014-1-s.pdf">Solution</a></span>
-                    </h4>
-                
+            <h4 class="problem-links">
+                <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2014-1-p.pdf">Probleme</a></span>
+                <span class="problem-link-s"><a target="_blank" href="/files/en/ipho/th/2014-1-s.pdf">Soluții</a></span>
+            </h4>
+        
                 <p class="problem-topics problem-topics-2014-1">
                     
-                            <span class="problem-topic topic-mech">Mechanics</span> 
+                            <span class="problem-topic topic-mech">Mecanică</span> 
                         
-                            <span class="problem-topic topic-thermo">Thermo.</span> 
+                            <span class="problem-topic topic-thermo">Termo.</span> 
                         
-                            <span class="problem-topic topic-circ">Circuits</span> 
+                            <span class="problem-topic topic-circ">Circuite</span> 
                         
                 </p>
                 
@@ -451,14 +489,14 @@
             <li class="problem-container">    
                 <h3 class="problem-title problem-title-2014-2">Van der Waals</h3>
                 
-                    <h4 class="problem-links problem-links-2014-2">
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2014-2-p.pdf">Problem</a></span>
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2014-2-s.pdf">Solution</a></span>
-                    </h4>
-                
+            <h4 class="problem-links">
+                <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2014-2-p.pdf">Probleme</a></span>
+                <span class="problem-link-s"><a target="_blank" href="/files/en/ipho/th/2014-2-s.pdf">Soluții</a></span>
+            </h4>
+        
                 <p class="problem-topics problem-topics-2014-2">
                     
-                            <span class="problem-topic topic-thermo">Thermo.</span> 
+                            <span class="problem-topic topic-thermo">Termo.</span> 
                         
                 </p>
                 
@@ -467,16 +505,16 @@
             <li class="problem-container">    
                 <h3 class="problem-title problem-title-2014-3">Gas Discharge</h3>
                 
-                    <h4 class="problem-links problem-links-2014-3">
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2014-3-p.pdf">Problem</a></span>
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2014-3-s.pdf">Solution</a></span>
-                    </h4>
-                
+            <h4 class="problem-links">
+                <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2014-3-p.pdf">Probleme</a></span>
+                <span class="problem-link-s"><a target="_blank" href="/files/en/ipho/th/2014-3-s.pdf">Soluții</a></span>
+            </h4>
+        
                 <p class="problem-topics problem-topics-2014-3">
                     
                             <span class="problem-topic topic-elec">Electro.</span> 
                         
-                            <span class="problem-topic topic-other">Other</span> 
+                            <span class="problem-topic topic-other">Altele</span> 
                         
                 </p>
                 
@@ -486,19 +524,19 @@
             </li>
         
             <li class="year-container year-container-2013">
-                <h1 class="year-title year-title-2013">2013</h1>
+                <h1 class="year-title">2013</h1>
                 
-                    <img class="country-image country-image-2013" height="17" src="https://countryflagsapi.com/png/DNK" />
+                    <img class="country-image" height="17" src="https://countryflagsapi.com/png/dnk" />
                 
-                    <h3 class="country-name country-2013">
+                    <h3 class="country-name">
                         <span>
-                            DNK
+                            Danemarca
                         </span>
                     </h3>
                 
 
                 
-                    <p class="year-website year-website-2013"><a target="_blank" href="http://www.ipho2013.dk">Website</a></p>
+                    <p class="year-website"><a target="_blank" href="http://www.ipho2013.dk">Website</a></p>
                 
 
                 <ul class="problems-container">
@@ -506,16 +544,16 @@
             <li class="problem-container">    
                 <h3 class="problem-title problem-title-2013-1">Maribo Meteorite</h3>
                 
-                    <h4 class="problem-links problem-links-2013-1">
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2013-1-p.pdf">Problem</a></span>
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2013-1-s.pdf">Solution</a></span>
-                    </h4>
-                
+            <h4 class="problem-links">
+                <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2013-1-p.pdf">Probleme</a></span>
+                <span class="problem-link-s"><a target="_blank" href="/files/en/ipho/th/2013-1-s.pdf">Soluții</a></span>
+            </h4>
+        
                 <p class="problem-topics problem-topics-2013-1">
                     
-                            <span class="problem-topic topic-mech">Mechanics</span> 
+                            <span class="problem-topic topic-mech">Mecanică</span> 
                         
-                            <span class="problem-topic topic-nuc">Nuclear</span> 
+                            <span class="problem-topic topic-nuc">Nucleară</span> 
                         
                 </p>
                 
@@ -524,11 +562,11 @@
             <li class="problem-container">    
                 <h3 class="problem-title problem-title-2013-2">Plasmonic Generator</h3>
                 
-                    <h4 class="problem-links problem-links-2013-2">
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2013-2-p.pdf">Problem</a></span>
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2013-2-s.pdf">Solution</a></span>
-                    </h4>
-                
+            <h4 class="problem-links">
+                <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2013-2-p.pdf">Probleme</a></span>
+                <span class="problem-link-s"><a target="_blank" href="/files/en/ipho/th/2013-2-s.pdf">Soluții</a></span>
+            </h4>
+        
                 <p class="problem-topics problem-topics-2013-2">
                     
                             <span class="problem-topic topic-elec">Electro.</span> 
@@ -540,16 +578,16 @@
             <li class="problem-container">    
                 <h3 class="problem-title problem-title-2013-3">Greenland Ice</h3>
                 
-                    <h4 class="problem-links problem-links-2013-3">
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2013-3-p.pdf">Problem</a></span>
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2013-3-s.pdf">Solution</a></span>
-                    </h4>
-                
+            <h4 class="problem-links">
+                <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2013-3-p.pdf">Probleme</a></span>
+                <span class="problem-link-s"><a target="_blank" href="/files/en/ipho/th/2013-3-s.pdf">Soluții</a></span>
+            </h4>
+        
                 <p class="problem-topics problem-topics-2013-3">
                     
-                            <span class="problem-topic topic-thermo">Thermo.</span> 
+                            <span class="problem-topic topic-thermo">Termo.</span> 
                         
-                            <span class="problem-topic topic-nuc">Nuclear</span> 
+                            <span class="problem-topic topic-nuc">Nucleară</span> 
                         
                 </p>
                 
@@ -559,19 +597,19 @@
             </li>
         
             <li class="year-container year-container-2012">
-                <h1 class="year-title year-title-2012">2012</h1>
+                <h1 class="year-title">2012</h1>
                 
-                    <img class="country-image country-image-2012" height="17" src="https://countryflagsapi.com/png/EST" />
+                    <img class="country-image" height="17" src="https://countryflagsapi.com/png/est" />
                 
-                    <h3 class="country-name country-2012">
+                    <h3 class="country-name">
                         <span>
-                            EST
+                            Estonia
                         </span>
                     </h3>
                 
 
                 
-                    <p class="year-website year-website-2012"><a target="_blank" href="http://www.ipho2012.ee/home/">Website</a></p>
+                    <p class="year-website"><a target="_blank" href="http://www.ipho2012.ee/home/">Website</a></p>
                 
 
                 <ul class="problems-container">
@@ -579,14 +617,14 @@
             <li class="problem-container">    
                 <h3 class="problem-title problem-title-2012-1">Focus on Scetches</h3>
                 
-                    <h4 class="problem-links problem-links-2012-1">
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2012-1-p.pdf">Problem</a></span>
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2012-1-s.pdf">Solution</a></span>
-                    </h4>
-                
+            <h4 class="problem-links">
+                <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2012-1-p.pdf">Probleme</a></span>
+                <span class="problem-link-s"><a target="_blank" href="/files/en/ipho/th/2012-1-s.pdf">Soluții</a></span>
+            </h4>
+        
                 <p class="problem-topics problem-topics-2012-1">
                     
-                            <span class="problem-topic topic-fluid">Fluids</span> 
+                            <span class="problem-topic topic-fluid">Fluide</span> 
                         
                             <span class="problem-topic topic-mag">Magnetism</span> 
                         
@@ -598,16 +636,16 @@
             <li class="problem-container">    
                 <h3 class="problem-title problem-title-2012-2">Kelvin Water Dropper</h3>
                 
-                    <h4 class="problem-links problem-links-2012-2">
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2012-2-p.pdf">Problem</a></span>
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2012-2-s.pdf">Solution</a></span>
-                    </h4>
-                
+            <h4 class="problem-links">
+                <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2012-2-p.pdf">Probleme</a></span>
+                <span class="problem-link-s"><a target="_blank" href="/files/en/ipho/th/2012-2-s.pdf">Soluții</a></span>
+            </h4>
+        
                 <p class="problem-topics problem-topics-2012-2">
                     
                             <span class="problem-topic topic-elec">Electro.</span> 
                         
-                            <span class="problem-topic topic-thermo">Thermo.</span> 
+                            <span class="problem-topic topic-thermo">Termo.</span> 
                         
                 </p>
                 
@@ -617,16 +655,16 @@
             <li class="problem-container">    
                 <h3 class="problem-title problem-title-2012-3">Protostar Formation</h3>
                 
-                    <h4 class="problem-links problem-links-2012-3">
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2012-3-p.pdf">Problem</a></span>
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2012-3-s.pdf">Solution</a></span>
-                    </h4>
-                
+            <h4 class="problem-links">
+                <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2012-3-p.pdf">Probleme</a></span>
+                <span class="problem-link-s"><a target="_blank" href="/files/en/ipho/th/2012-3-s.pdf">Soluții</a></span>
+            </h4>
+        
                 <p class="problem-topics problem-topics-2012-3">
                     
-                            <span class="problem-topic topic-thermo">Thermo.</span> 
+                            <span class="problem-topic topic-thermo">Termo.</span> 
                         
-                            <span class="problem-topic topic-grav">Gravity</span> 
+                            <span class="problem-topic topic-grav">Gravitație</span> 
                         
                 </p>
                 
@@ -637,19 +675,19 @@
             </li>
         
             <li class="year-container year-container-2011">
-                <h1 class="year-title year-title-2011">2011</h1>
+                <h1 class="year-title">2011</h1>
                 
-                    <img class="country-image country-image-2011" height="17" src="https://countryflagsapi.com/png/THA" />
+                    <img class="country-image" height="17" src="https://countryflagsapi.com/png/tha" />
                 
-                    <h3 class="country-name country-2011">
+                    <h3 class="country-name">
                         <span>
-                            THA
+                            Tailanda
                         </span>
                     </h3>
                 
 
                 
-                    <p class="year-website year-website-2011"><a target="_blank" href="mpec.sc.mahidol.ac.th › ipho2011">Website</a></p>
+                    <p class="year-website"><a target="_blank" href="mpec.sc.mahidol.ac.th › ipho2011">Website</a></p>
                 
 
                 <ul class="problems-container">
@@ -657,14 +695,14 @@
             <li class="problem-container">    
                 <h3 class="problem-title problem-title-2011-1">Three-Body Problem</h3>
                 
-                    <h4 class="problem-links problem-links-2011-1">
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2011-1-p.pdf">Problem</a></span>
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2011-1-s.pdf">Solution</a></span>
-                    </h4>
-                
+            <h4 class="problem-links">
+                <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2011-1-p.pdf">Probleme</a></span>
+                <span class="problem-link-s"><a target="_blank" href="/files/en/ipho/th/2011-1-s.pdf">Soluții</a></span>
+            </h4>
+        
                 <p class="problem-topics problem-topics-2011-1">
                     
-                            <span class="problem-topic topic-grav">Gravity</span> 
+                            <span class="problem-topic topic-grav">Gravitație</span> 
                         
                 </p>
                 
@@ -673,16 +711,16 @@
             <li class="problem-container">    
                 <h3 class="problem-title problem-title-2011-2">Electrified Soap Bubble</h3>
                 
-                    <h4 class="problem-links problem-links-2011-2">
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2011-2-p.pdf">Problem</a></span>
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2011-2-s.pdf">Solution</a></span>
-                    </h4>
-                
+            <h4 class="problem-links">
+                <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2011-2-p.pdf">Probleme</a></span>
+                <span class="problem-link-s"><a target="_blank" href="/files/en/ipho/th/2011-2-s.pdf">Soluții</a></span>
+            </h4>
+        
                 <p class="problem-topics problem-topics-2011-2">
                     
                             <span class="problem-topic topic-elec">Electro.</span> 
                         
-                            <span class="problem-topic topic-thermo">Thermo.</span> 
+                            <span class="problem-topic topic-thermo">Termo.</span> 
                         
                 </p>
                 
@@ -691,14 +729,14 @@
             <li class="problem-container">    
                 <h3 class="problem-title problem-title-2011-3">Scattering of Ion</h3>
                 
-                    <h4 class="problem-links problem-links-2011-3">
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2011-3-p.pdf">Problem</a></span>
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2011-3-s.pdf">Solution</a></span>
-                    </h4>
-                
+            <h4 class="problem-links">
+                <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2011-3-p.pdf">Probleme</a></span>
+                <span class="problem-link-s"><a target="_blank" href="/files/en/ipho/th/2011-3-s.pdf">Soluții</a></span>
+            </h4>
+        
                 <p class="problem-topics problem-topics-2011-3">
                     
-                            <span class="problem-topic topic-nuc">Nuclear</span> 
+                            <span class="problem-topic topic-nuc">Nucleară</span> 
                         
                 </p>
                 
@@ -709,19 +747,19 @@
             </li>
         
             <li class="year-container year-container-2010">
-                <h1 class="year-title year-title-2010">2010</h1>
+                <h1 class="year-title">2010</h1>
                 
-                    <img class="country-image country-image-2010" height="17" src="https://countryflagsapi.com/png/HRV" />
+                    <img class="country-image" height="17" src="https://countryflagsapi.com/png/hrv" />
                 
-                    <h3 class="country-name country-2010">
+                    <h3 class="country-name">
                         <span>
-                            HRV
+                            Croația
                         </span>
                     </h3>
                 
 
                 
-                    <p class="year-website year-website-2010"><a target="_blank" href="http://ipho2010.hfd.hr">Website</a></p>
+                    <p class="year-website"><a target="_blank" href="http://ipho2010.hfd.hr">Website</a></p>
                 
 
                 <ul class="problems-container">
@@ -729,11 +767,11 @@
             <li class="problem-container">    
                 <h3 class="problem-title problem-title-2010-1">Image Charge</h3>
                 
-                    <h4 class="problem-links problem-links-2010-1">
-                        
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2010-1-s.pdf">Solution</a></span>
-                    </h4>
-                
+            <h4 class="problem-links">
+                <span class="problem-link-p"><a target="_blank" href="">Probleme</a></span>
+                <span class="problem-link-s"><a target="_blank" href="/files/en/ipho/th/2010-1-s.pdf">Soluții</a></span>
+            </h4>
+        
                 <p class="problem-topics problem-topics-2010-1">
                     
                             <span class="problem-topic topic-elec">Electro.</span> 
@@ -745,14 +783,14 @@
             <li class="problem-container">    
                 <h3 class="problem-title problem-title-2010-2">Chimney Physics</h3>
                 
-                    <h4 class="problem-links problem-links-2010-2">
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2010-2-p.pdf">Problem</a></span>
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2010-2-s.pdf">Solution</a></span>
-                    </h4>
-                
+            <h4 class="problem-links">
+                <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2010-2-p.pdf">Probleme</a></span>
+                <span class="problem-link-s"><a target="_blank" href="/files/en/ipho/th/2010-2-s.pdf">Soluții</a></span>
+            </h4>
+        
                 <p class="problem-topics problem-topics-2010-2">
                     
-                            <span class="problem-topic topic-thermo">Thermo.</span> 
+                            <span class="problem-topic topic-thermo">Termo.</span> 
                         
                 </p>
                 
@@ -761,14 +799,14 @@
             <li class="problem-container">    
                 <h3 class="problem-title problem-title-2010-3">Atomic Nucleus</h3>
                 
-                    <h4 class="problem-links problem-links-2010-3">
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2010-3-p.pdf">Problem</a></span>
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2010-3-s.pdf">Solution</a></span>
-                    </h4>
-                
+            <h4 class="problem-links">
+                <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2010-3-p.pdf">Probleme</a></span>
+                <span class="problem-link-s"><a target="_blank" href="/files/en/ipho/th/2010-3-s.pdf">Soluții</a></span>
+            </h4>
+        
                 <p class="problem-topics problem-topics-2010-3">
                     
-                            <span class="problem-topic topic-nuc">Nuclear</span> 
+                            <span class="problem-topic topic-nuc">Nucleară</span> 
                         
                 </p>
                 
@@ -779,13 +817,13 @@
             </li>
         
             <li class="year-container year-container-2009">
-                <h1 class="year-title year-title-2009">2009</h1>
+                <h1 class="year-title">2009</h1>
                 
-                    <img class="country-image country-image-2009" height="17" src="https://countryflagsapi.com/png/MEX" />
+                    <img class="country-image" height="17" src="https://countryflagsapi.com/png/mex" />
                 
-                    <h3 class="country-name country-2009">
+                    <h3 class="country-name">
                         <span>
-                            MEX
+                            Mexic
                         </span>
                     </h3>
                 
@@ -798,11 +836,11 @@
             <li class="problem-container">    
                 <h3 class="problem-title problem-title-2009-1">Earth-Moon System</h3>
                 
-                    <h4 class="problem-links problem-links-2009-1">
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2009-1-p.pdf">Problem</a></span>
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2009-1-s.pdf">Solution</a></span>
-                    </h4>
-                
+            <h4 class="problem-links">
+                <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2009-1-p.pdf">Probleme</a></span>
+                <span class="problem-link-s"><a target="_blank" href="/files/en/ipho/th/2009-1-s.pdf">Soluții</a></span>
+            </h4>
+        
                 <p class="problem-topics problem-topics-2009-1">
                     
                             <span class="problem-topic topic-elec">Electro.</span> 
@@ -814,16 +852,16 @@
             <li class="problem-container">    
                 <h3 class="problem-title problem-title-2009-2">Laser Cooling</h3>
                 
-                    <h4 class="problem-links problem-links-2009-2">
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2009-2-p.pdf">Problem</a></span>
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2009-2-s.pdf">Solution</a></span>
-                    </h4>
-                
+            <h4 class="problem-links">
+                <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2009-2-p.pdf">Probleme</a></span>
+                <span class="problem-link-s"><a target="_blank" href="/files/en/ipho/th/2009-2-s.pdf">Soluții</a></span>
+            </h4>
+        
                 <p class="problem-topics problem-topics-2009-2">
                     
-                            <span class="problem-topic topic-mech">Mechanics</span> 
+                            <span class="problem-topic topic-mech">Mecanică</span> 
                         
-                            <span class="problem-topic topic-quantum">Quantum</span> 
+                            <span class="problem-topic topic-quantum">Cuantică</span> 
                         
                 </p>
                 
@@ -832,18 +870,18 @@
             <li class="problem-container">    
                 <h3 class="problem-title problem-title-2009-3">Star Size</h3>
                 
-                    <h4 class="problem-links problem-links-2009-3">
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2009-3-p.pdf">Problem</a></span>
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2009-3-s.pdf">Solution</a></span>
-                    </h4>
-                
+            <h4 class="problem-links">
+                <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2009-3-p.pdf">Probleme</a></span>
+                <span class="problem-link-s"><a target="_blank" href="/files/en/ipho/th/2009-3-s.pdf">Soluții</a></span>
+            </h4>
+        
                 <p class="problem-topics problem-topics-2009-3">
                     
-                            <span class="problem-topic topic-grav">Gravity</span> 
+                            <span class="problem-topic topic-grav">Gravitație</span> 
                         
-                            <span class="problem-topic topic-quantum">Quantum</span> 
+                            <span class="problem-topic topic-quantum">Cuantică</span> 
                         
-                            <span class="problem-topic topic-mech">Mechanics</span> 
+                            <span class="problem-topic topic-mech">Mecanică</span> 
                         
                 </p>
                 
@@ -853,13 +891,13 @@
             </li>
         
             <li class="year-container year-container-2008">
-                <h1 class="year-title year-title-2008">2008</h1>
+                <h1 class="year-title">2008</h1>
                 
-                    <img class="country-image country-image-2008" height="17" src="https://countryflagsapi.com/png/VNM" />
+                    <img class="country-image" height="17" src="https://countryflagsapi.com/png/vnm" />
                 
-                    <h3 class="country-name country-2008">
+                    <h3 class="country-name">
                         <span>
-                            VNM
+                            Viet Nam
                         </span>
                     </h3>
                 
@@ -872,14 +910,14 @@
             <li class="problem-container">    
                 <h3 class="problem-title problem-title-2008-1">Rice Mortar</h3>
                 
-                    <h4 class="problem-links problem-links-2008-1">
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2008-1-p.pdf">Problem</a></span>
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2008-1-s.pdf">Solution</a></span>
-                    </h4>
-                
+            <h4 class="problem-links">
+                <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2008-1-p.pdf">Probleme</a></span>
+                <span class="problem-link-s"><a target="_blank" href="/files/en/ipho/th/2008-1-s.pdf">Soluții</a></span>
+            </h4>
+        
                 <p class="problem-topics problem-topics-2008-1">
                     
-                            <span class="problem-topic topic-mech">Mechanics</span> 
+                            <span class="problem-topic topic-mech">Mecanică</span> 
                         
                 </p>
                 
@@ -888,14 +926,14 @@
             <li class="problem-container">    
                 <h3 class="problem-title problem-title-2008-2">Cherenkov Light</h3>
                 
-                    <h4 class="problem-links problem-links-2008-2">
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2008-2-p.pdf">Problem</a></span>
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2008-2-s.pdf">Solution</a></span>
-                    </h4>
-                
+            <h4 class="problem-links">
+                <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2008-2-p.pdf">Probleme</a></span>
+                <span class="problem-link-s"><a target="_blank" href="/files/en/ipho/th/2008-2-s.pdf">Soluții</a></span>
+            </h4>
+        
                 <p class="problem-topics problem-topics-2008-2">
                     
-                            <span class="problem-topic topic-rel">Relativity</span> 
+                            <span class="problem-topic topic-rel">Relativitate</span> 
                         
                 </p>
                 
@@ -904,14 +942,14 @@
             <li class="problem-container">    
                 <h3 class="problem-title problem-title-2008-3">Atmosphere</h3>
                 
-                    <h4 class="problem-links problem-links-2008-3">
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2008-3-p.pdf">Problem</a></span>
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2008-3-s.pdf">Solution</a></span>
-                    </h4>
-                
+            <h4 class="problem-links">
+                <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2008-3-p.pdf">Probleme</a></span>
+                <span class="problem-link-s"><a target="_blank" href="/files/en/ipho/th/2008-3-s.pdf">Soluții</a></span>
+            </h4>
+        
                 <p class="problem-topics problem-topics-2008-3">
                     
-                            <span class="problem-topic topic-thermo">Thermo.</span> 
+                            <span class="problem-topic topic-thermo">Termo.</span> 
                         
                 </p>
                 
@@ -922,13 +960,13 @@
             </li>
         
             <li class="year-container year-container-2007">
-                <h1 class="year-title year-title-2007">2007</h1>
+                <h1 class="year-title">2007</h1>
                 
-                    <img class="country-image country-image-2007" height="17" src="https://countryflagsapi.com/png/IRN" />
+                    <img class="country-image" height="17" src="https://countryflagsapi.com/png/irn" />
                 
-                    <h3 class="country-name country-2007">
+                    <h3 class="country-name">
                         <span>
-                            IRN
+                            Iran
                         </span>
                     </h3>
                 
@@ -941,16 +979,16 @@
             <li class="problem-container">    
                 <h3 class="problem-title problem-title-2007-1">Black Hole</h3>
                 
-                    <h4 class="problem-links problem-links-2007-1">
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2007-1-p.pdf">Problem</a></span>
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2007-1-s.pdf">Solution</a></span>
-                    </h4>
-                
+            <h4 class="problem-links">
+                <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2007-1-p.pdf">Probleme</a></span>
+                <span class="problem-link-s"><a target="_blank" href="/files/en/ipho/th/2007-1-s.pdf">Soluții</a></span>
+            </h4>
+        
                 <p class="problem-topics problem-topics-2007-1">
                     
-                            <span class="problem-topic topic-grav">Gravity</span> 
+                            <span class="problem-topic topic-grav">Gravitație</span> 
                         
-                            <span class="problem-topic topic-other">Other</span> 
+                            <span class="problem-topic topic-other">Altele</span> 
                         
                 </p>
                 
@@ -959,16 +997,16 @@
             <li class="problem-container">    
                 <h3 class="problem-title problem-title-2007-2">Air Bag</h3>
                 
-                    <h4 class="problem-links problem-links-2007-2">
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2007-2-p.pdf">Problem</a></span>
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2007-2-s.pdf">Solution</a></span>
-                    </h4>
-                
+            <h4 class="problem-links">
+                <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2007-2-p.pdf">Probleme</a></span>
+                <span class="problem-link-s"><a target="_blank" href="/files/en/ipho/th/2007-2-s.pdf">Soluții</a></span>
+            </h4>
+        
                 <p class="problem-topics problem-topics-2007-2">
                     
                             <span class="problem-topic topic-elec">Electro.</span> 
                         
-                            <span class="problem-topic topic-circ">Circuits</span> 
+                            <span class="problem-topic topic-circ">Circuite</span> 
                         
                 </p>
                 
@@ -977,14 +1015,14 @@
             <li class="problem-container">    
                 <h3 class="problem-title problem-title-2007-3">Binary Stars</h3>
                 
-                    <h4 class="problem-links problem-links-2007-3">
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2007-3-p.pdf">Problem</a></span>
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2007-3-s.pdf">Solution</a></span>
-                    </h4>
-                
+            <h4 class="problem-links">
+                <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2007-3-p.pdf">Probleme</a></span>
+                <span class="problem-link-s"><a target="_blank" href="/files/en/ipho/th/2007-3-s.pdf">Soluții</a></span>
+            </h4>
+        
                 <p class="problem-topics problem-topics-2007-3">
                     
-                            <span class="problem-topic topic-grav">Gravity</span> 
+                            <span class="problem-topic topic-grav">Gravitație</span> 
                         
                 </p>
                 
@@ -994,13 +1032,13 @@
             </li>
         
             <li class="year-container year-container-2006">
-                <h1 class="year-title year-title-2006">2006</h1>
+                <h1 class="year-title">2006</h1>
                 
-                    <img class="country-image country-image-2006" height="17" src="https://countryflagsapi.com/png/SGP" />
+                    <img class="country-image" height="17" src="https://countryflagsapi.com/png/sgp" />
                 
-                    <h3 class="country-name country-2006">
+                    <h3 class="country-name">
                         <span>
-                            SGP
+                            Singapore
                         </span>
                     </h3>
                 
@@ -1013,16 +1051,16 @@
             <li class="problem-container">    
                 <h3 class="problem-title problem-title-2006-1">Neutron Interferometer</h3>
                 
-                    <h4 class="problem-links problem-links-2006-1">
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2006-1-p.pdf">Problem</a></span>
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2006-1-s.pdf">Solution</a></span>
-                    </h4>
-                
+            <h4 class="problem-links">
+                <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2006-1-p.pdf">Probleme</a></span>
+                <span class="problem-link-s"><a target="_blank" href="/files/en/ipho/th/2006-1-s.pdf">Soluții</a></span>
+            </h4>
+        
                 <p class="problem-topics problem-topics-2006-1">
                     
-                            <span class="problem-topic topic-opt">Optics</span> 
+                            <span class="problem-topic topic-opt">Optică</span> 
                         
-                            <span class="problem-topic topic-quantum">Quantum</span> 
+                            <span class="problem-topic topic-quantum">Cuantică</span> 
                         
                 </p>
                 
@@ -1032,14 +1070,14 @@
             <li class="problem-container">    
                 <h3 class="problem-title problem-title-2006-2">Relativistic Rod</h3>
                 
-                    <h4 class="problem-links problem-links-2006-2">
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2006-2-p.pdf">Problem</a></span>
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2006-2-s.pdf">Solution</a></span>
-                    </h4>
-                
+            <h4 class="problem-links">
+                <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2006-2-p.pdf">Probleme</a></span>
+                <span class="problem-link-s"><a target="_blank" href="/files/en/ipho/th/2006-2-s.pdf">Soluții</a></span>
+            </h4>
+        
                 <p class="problem-topics problem-topics-2006-2">
                     
-                            <span class="problem-topic topic-rel">Relativity</span> 
+                            <span class="problem-topic topic-rel">Relativitate</span> 
                         
                 </p>
                 
@@ -1048,20 +1086,20 @@
             <li class="problem-container">    
                 <h3 class="problem-title problem-title-2006-3">Four Estimations</h3>
                 
-                    <h4 class="problem-links problem-links-2006-3">
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2006-3-p.pdf">Problem</a></span>
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2006-3-s.pdf">Solution</a></span>
-                    </h4>
-                
+            <h4 class="problem-links">
+                <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2006-3-p.pdf">Probleme</a></span>
+                <span class="problem-link-s"><a target="_blank" href="/files/en/ipho/th/2006-3-s.pdf">Soluții</a></span>
+            </h4>
+        
                 <p class="problem-topics problem-topics-2006-3">
                     
-                            <span class="problem-topic topic-other">Other</span> 
+                            <span class="problem-topic topic-other">Altele</span> 
                         
-                            <span class="problem-topic topic-thermo">Thermo.</span> 
+                            <span class="problem-topic topic-thermo">Termo.</span> 
                         
                             <span class="problem-topic topic-elec">Electro.</span> 
                         
-                            <span class="problem-topic topic-fluid">Fluids</span> 
+                            <span class="problem-topic topic-fluid">Fluide</span> 
                         
                 </p>
                 
@@ -1071,13 +1109,13 @@
             </li>
         
             <li class="year-container year-container-2005">
-                <h1 class="year-title year-title-2005">2005</h1>
+                <h1 class="year-title">2005</h1>
                 
-                    <img class="country-image country-image-2005" height="17" src="https://countryflagsapi.com/png/ESP" />
+                    <img class="country-image" height="17" src="https://countryflagsapi.com/png/esp" />
                 
-                    <h3 class="country-name country-2005">
+                    <h3 class="country-name">
                         <span>
-                            ESP
+                            Spania
                         </span>
                     </h3>
                 
@@ -1090,14 +1128,14 @@
             <li class="problem-container">    
                 <h3 class="problem-title problem-title-2005-1">Satellite</h3>
                 
-                    <h4 class="problem-links problem-links-2005-1">
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2005-1-p.pdf">Problem</a></span>
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2005-1-s.pdf">Solution</a></span>
-                    </h4>
-                
+            <h4 class="problem-links">
+                <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2005-1-p.pdf">Probleme</a></span>
+                <span class="problem-link-s"><a target="_blank" href="/files/en/ipho/th/2005-1-s.pdf">Soluții</a></span>
+            </h4>
+        
                 <p class="problem-topics problem-topics-2005-1">
                     
-                            <span class="problem-topic topic-grav">Gravity</span> 
+                            <span class="problem-topic topic-grav">Gravitație</span> 
                         
                 </p>
                 
@@ -1106,11 +1144,11 @@
             <li class="problem-container">    
                 <h3 class="problem-title problem-title-2005-2">Electrical Quantities</h3>
                 
-                    <h4 class="problem-links problem-links-2005-2">
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2005-2-p.pdf">Problem</a></span>
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2005-2-s.pdf">Solution</a></span>
-                    </h4>
-                
+            <h4 class="problem-links">
+                <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2005-2-p.pdf">Probleme</a></span>
+                <span class="problem-link-s"><a target="_blank" href="/files/en/ipho/th/2005-2-s.pdf">Soluții</a></span>
+            </h4>
+        
                 <p class="problem-topics problem-topics-2005-2">
                     
                             <span class="problem-topic topic-mag">Magnetism</span> 
@@ -1122,14 +1160,14 @@
             <li class="problem-container">    
                 <h3 class="problem-title problem-title-2005-3">Neutrons in Gravity</h3>
                 
-                    <h4 class="problem-links problem-links-2005-3">
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2005-3-p.pdf">Problem</a></span>
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2005-3-s.pdf">Solution</a></span>
-                    </h4>
-                
+            <h4 class="problem-links">
+                <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2005-3-p.pdf">Probleme</a></span>
+                <span class="problem-link-s"><a target="_blank" href="/files/en/ipho/th/2005-3-s.pdf">Soluții</a></span>
+            </h4>
+        
                 <p class="problem-topics problem-topics-2005-3">
                     
-                            <span class="problem-topic topic-quantum">Quantum</span> 
+                            <span class="problem-topic topic-quantum">Cuantică</span> 
                         
                 </p>
                 
@@ -1140,13 +1178,13 @@
             </li>
         
             <li class="year-container year-container-2004">
-                <h1 class="year-title year-title-2004">2004</h1>
+                <h1 class="year-title">2004</h1>
                 
-                    <img class="country-image country-image-2004" height="17" src="https://countryflagsapi.com/png/KOR" />
+                    <img class="country-image" height="17" src="https://countryflagsapi.com/png/kor" />
                 
-                    <h3 class="country-name country-2004">
+                    <h3 class="country-name">
                         <span>
-                            KOR
+                            Korea de Sud
                         </span>
                     </h3>
                 
@@ -1159,11 +1197,11 @@
             <li class="problem-container">    
                 <h3 class="problem-title problem-title-2004-1">Ping-Pong Resistor</h3>
                 
-                    <h4 class="problem-links problem-links-2004-1">
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2004-1-p.pdf">Problem</a></span>
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2004-1-s.pdf">Solution</a></span>
-                    </h4>
-                
+            <h4 class="problem-links">
+                <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2004-1-p.pdf">Probleme</a></span>
+                <span class="problem-link-s"><a target="_blank" href="/files/en/ipho/th/2004-1-s.pdf">Soluții</a></span>
+            </h4>
+        
                 <p class="problem-topics problem-topics-2004-1">
                     
                             <span class="problem-topic topic-elec">Electro.</span> 
@@ -1176,14 +1214,14 @@
             <li class="problem-container">    
                 <h3 class="problem-title problem-title-2004-2">Rising Balloon</h3>
                 
-                    <h4 class="problem-links problem-links-2004-2">
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2004-2-p.pdf">Problem</a></span>
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2004-2-s.pdf">Solution</a></span>
-                    </h4>
-                
+            <h4 class="problem-links">
+                <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2004-2-p.pdf">Probleme</a></span>
+                <span class="problem-link-s"><a target="_blank" href="/files/en/ipho/th/2004-2-s.pdf">Soluții</a></span>
+            </h4>
+        
                 <p class="problem-topics problem-topics-2004-2">
                     
-                            <span class="problem-topic topic-thermo">Thermo.</span> 
+                            <span class="problem-topic topic-thermo">Termo.</span> 
                         
                 </p>
                 
@@ -1192,14 +1230,14 @@
             <li class="problem-container">    
                 <h3 class="problem-title problem-title-2004-3">Atomic Microscope</h3>
                 
-                    <h4 class="problem-links problem-links-2004-3">
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2004-3-p.pdf">Problem</a></span>
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2004-3-s.pdf">Solution</a></span>
-                    </h4>
-                
+            <h4 class="problem-links">
+                <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2004-3-p.pdf">Probleme</a></span>
+                <span class="problem-link-s"><a target="_blank" href="/files/en/ipho/th/2004-3-s.pdf">Soluții</a></span>
+            </h4>
+        
                 <p class="problem-topics problem-topics-2004-3">
                     
-                            <span class="problem-topic topic-osc">Oscillations</span> 
+                            <span class="problem-topic topic-osc">Oscilații</span> 
                         
                 </p>
                 
@@ -1209,13 +1247,13 @@
             </li>
         
             <li class="year-container year-container-2003">
-                <h1 class="year-title year-title-2003">2003</h1>
+                <h1 class="year-title">2003</h1>
                 
-                    <img class="country-image country-image-2003" height="17" src="https://countryflagsapi.com/png/TWN" />
+                    <img class="country-image" height="17" src="https://countryflagsapi.com/png/twn" />
                 
-                    <h3 class="country-name country-2003">
+                    <h3 class="country-name">
                         <span>
-                            TWN
+                            Taiwan
                         </span>
                     </h3>
                 
@@ -1228,14 +1266,14 @@
             <li class="problem-container">    
                 <h3 class="problem-title problem-title-2003-1">Falling Weight</h3>
                 
-                    <h4 class="problem-links problem-links-2003-1">
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2003-1-p.pdf">Problem</a></span>
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2003-1-s.pdf">Solution</a></span>
-                    </h4>
-                
+            <h4 class="problem-links">
+                <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2003-1-p.pdf">Probleme</a></span>
+                <span class="problem-link-s"><a target="_blank" href="/files/en/ipho/th/2003-1-s.pdf">Soluții</a></span>
+            </h4>
+        
                 <p class="problem-topics problem-topics-2003-1">
                     
-                            <span class="problem-topic topic-mech">Mechanics</span> 
+                            <span class="problem-topic topic-mech">Mecanică</span> 
                         
                 </p>
                 
@@ -1244,14 +1282,14 @@
             <li class="problem-container">    
                 <h3 class="problem-title problem-title-2003-2">Crystal Resonator</h3>
                 
-                    <h4 class="problem-links problem-links-2003-2">
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2003-2-p.pdf">Problem</a></span>
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2003-2-s.pdf">Solution</a></span>
-                    </h4>
-                
+            <h4 class="problem-links">
+                <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2003-2-p.pdf">Probleme</a></span>
+                <span class="problem-link-s"><a target="_blank" href="/files/en/ipho/th/2003-2-s.pdf">Soluții</a></span>
+            </h4>
+        
                 <p class="problem-topics problem-topics-2003-2">
                     
-                            <span class="problem-topic topic-mech">Mechanics</span> 
+                            <span class="problem-topic topic-mech">Mecanică</span> 
                         
                             <span class="problem-topic topic-elec">Electro.</span> 
                         
@@ -1262,14 +1300,14 @@
             <li class="problem-container">    
                 <h3 class="problem-title problem-title-2003-3">Neutrino / Levitation</h3>
                 
-                    <h4 class="problem-links problem-links-2003-3">
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2003-3-p.pdf">Problem</a></span>
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2003-3-s.pdf">Solution</a></span>
-                    </h4>
-                
+            <h4 class="problem-links">
+                <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2003-3-p.pdf">Probleme</a></span>
+                <span class="problem-link-s"><a target="_blank" href="/files/en/ipho/th/2003-3-s.pdf">Soluții</a></span>
+            </h4>
+        
                 <p class="problem-topics problem-topics-2003-3">
                     
-                            <span class="problem-topic topic-rel">Relativity</span> 
+                            <span class="problem-topic topic-rel">Relativitate</span> 
                         
                 </p>
                 
@@ -1280,13 +1318,13 @@
             </li>
         
             <li class="year-container year-container-2002">
-                <h1 class="year-title year-title-2002">2002</h1>
+                <h1 class="year-title">2002</h1>
                 
-                    <img class="country-image country-image-2002" height="17" src="https://countryflagsapi.com/png/IDN" />
+                    <img class="country-image" height="17" src="https://countryflagsapi.com/png/idn" />
                 
-                    <h3 class="country-name country-2002">
+                    <h3 class="country-name">
                         <span>
-                            IDN
+                            Indonezia
                         </span>
                     </h3>
                 
@@ -1299,11 +1337,11 @@
             <li class="problem-container">    
                 <h3 class="problem-title problem-title-2002-1">Ground Radar</h3>
                 
-                    <h4 class="problem-links problem-links-2002-1">
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2002-1-p.pdf">Problem</a></span>
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2002-1-s.pdf">Solution</a></span>
-                    </h4>
-                
+            <h4 class="problem-links">
+                <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2002-1-p.pdf">Probleme</a></span>
+                <span class="problem-link-s"><a target="_blank" href="/files/en/ipho/th/2002-1-s.pdf">Soluții</a></span>
+            </h4>
+        
                 <p class="problem-topics problem-topics-2002-1">
                     
                             <span class="problem-topic topic-elec">Electro.</span> 
@@ -1315,16 +1353,16 @@
             <li class="problem-container">    
                 <h3 class="problem-title problem-title-2002-2">Predator and Prey</h3>
                 
-                    <h4 class="problem-links problem-links-2002-2">
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2002-2-p.pdf">Problem</a></span>
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2002-2-s.pdf">Solution</a></span>
-                    </h4>
-                
+            <h4 class="problem-links">
+                <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2002-2-p.pdf">Probleme</a></span>
+                <span class="problem-link-s"><a target="_blank" href="/files/en/ipho/th/2002-2-s.pdf">Soluții</a></span>
+            </h4>
+        
                 <p class="problem-topics problem-topics-2002-2">
                     
                             <span class="problem-topic topic-elec">Electro.</span> 
                         
-                            <span class="problem-topic topic-circ">Circuits</span> 
+                            <span class="problem-topic topic-circ">Circuite</span> 
                         
                 </p>
                 
@@ -1334,14 +1372,14 @@
             <li class="problem-container">    
                 <h3 class="problem-title problem-title-2002-3">Inclined Road</h3>
                 
-                    <h4 class="problem-links problem-links-2002-3">
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2002-3-p.pdf">Problem</a></span>
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2002-3-s.pdf">Solution</a></span>
-                    </h4>
-                
+            <h4 class="problem-links">
+                <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2002-3-p.pdf">Probleme</a></span>
+                <span class="problem-link-s"><a target="_blank" href="/files/en/ipho/th/2002-3-s.pdf">Soluții</a></span>
+            </h4>
+        
                 <p class="problem-topics problem-topics-2002-3">
                     
-                            <span class="problem-topic topic-mech">Mechanics</span> 
+                            <span class="problem-topic topic-mech">Mecanică</span> 
                         
                 </p>
                 
@@ -1351,13 +1389,13 @@
             </li>
         
             <li class="year-container year-container-2001">
-                <h1 class="year-title year-title-2001">2001</h1>
+                <h1 class="year-title">2001</h1>
                 
-                    <img class="country-image country-image-2001" height="17" src="https://countryflagsapi.com/png/TUR" />
+                    <img class="country-image" height="17" src="https://countryflagsapi.com/png/tur" />
                 
-                    <h3 class="country-name country-2001">
+                    <h3 class="country-name">
                         <span>
-                            TUR
+                            Turcia
                         </span>
                     </h3>
                 
@@ -1370,16 +1408,16 @@
             <li class="problem-container">    
                 <h3 class="problem-title problem-title-2001-1">Four Problems</h3>
                 
-                    <h4 class="problem-links problem-links-2001-1">
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2001-1-p.pdf">Problem</a></span>
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2001-1-s.pdf">Solution</a></span>
-                    </h4>
-                
+            <h4 class="problem-links">
+                <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2001-1-p.pdf">Probleme</a></span>
+                <span class="problem-link-s"><a target="_blank" href="/files/en/ipho/th/2001-1-s.pdf">Soluții</a></span>
+            </h4>
+        
                 <p class="problem-topics problem-topics-2001-1">
                     
-                            <span class="problem-topic topic-circ">Circuits</span> 
+                            <span class="problem-topic topic-circ">Circuite</span> 
                         
-                            <span class="problem-topic topic-thermo">Thermo.</span> 
+                            <span class="problem-topic topic-thermo">Termo.</span> 
                         
                 </p>
                 
@@ -1388,14 +1426,14 @@
             <li class="problem-container">    
                 <h3 class="problem-title problem-title-2001-2">Binary Star System</h3>
                 
-                    <h4 class="problem-links problem-links-2001-2">
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2001-2-p.pdf">Problem</a></span>
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2001-2-s.pdf">Solution</a></span>
-                    </h4>
-                
+            <h4 class="problem-links">
+                <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2001-2-p.pdf">Probleme</a></span>
+                <span class="problem-link-s"><a target="_blank" href="/files/en/ipho/th/2001-2-s.pdf">Soluții</a></span>
+            </h4>
+        
                 <p class="problem-topics problem-topics-2001-2">
                     
-                            <span class="problem-topic topic-grav">Gravity</span> 
+                            <span class="problem-topic topic-grav">Gravitație</span> 
                         
                 </p>
                 
@@ -1404,11 +1442,11 @@
             <li class="problem-container">    
                 <h3 class="problem-title problem-title-2001-3">MHD Generator</h3>
                 
-                    <h4 class="problem-links problem-links-2001-3">
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2001-3-p.pdf">Problem</a></span>
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2001-3-s.pdf">Solution</a></span>
-                    </h4>
-                
+            <h4 class="problem-links">
+                <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2001-3-p.pdf">Probleme</a></span>
+                <span class="problem-link-s"><a target="_blank" href="/files/en/ipho/th/2001-3-s.pdf">Soluții</a></span>
+            </h4>
+        
                 <p class="problem-topics problem-topics-2001-3">
                     
                             <span class="problem-topic topic-mag">Magnetism</span> 
@@ -1421,13 +1459,13 @@
             </li>
         
             <li class="year-container year-container-2000">
-                <h1 class="year-title year-title-2000">2000</h1>
+                <h1 class="year-title">2000</h1>
                 
-                    <img class="country-image country-image-2000" height="17" src="https://countryflagsapi.com/png/GBR" />
+                    <img class="country-image" height="17" src="https://countryflagsapi.com/png/gbr" />
                 
-                    <h3 class="country-name country-2000">
+                    <h3 class="country-name">
                         <span>
-                            GBR
+                            Regatul Unit
                         </span>
                     </h3>
                 
@@ -1440,18 +1478,18 @@
             <li class="problem-container">    
                 <h3 class="problem-title problem-title-2000-1">Five Problems</h3>
                 
-                    <h4 class="problem-links problem-links-2000-1">
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2000-1-p.pdf">Problem</a></span>
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2000-1-s.pdf">Solution</a></span>
-                    </h4>
-                
+            <h4 class="problem-links">
+                <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2000-1-p.pdf">Probleme</a></span>
+                <span class="problem-link-s"><a target="_blank" href="/files/en/ipho/th/2000-1-s.pdf">Soluții</a></span>
+            </h4>
+        
                 <p class="problem-topics problem-topics-2000-1">
                     
-                            <span class="problem-topic topic-mech">Mechanics</span> 
+                            <span class="problem-topic topic-mech">Mecanică</span> 
                         
-                            <span class="problem-topic topic-thermo">Thermo.</span> 
+                            <span class="problem-topic topic-thermo">Termo.</span> 
                         
-                            <span class="problem-topic topic-nuc">Nuclear</span> 
+                            <span class="problem-topic topic-nuc">Nucleară</span> 
                         
                             <span class="problem-topic topic-elec">Electro.</span> 
                         
@@ -1465,11 +1503,11 @@
             <li class="problem-container">    
                 <h3 class="problem-title problem-title-2000-2">Cathode Ray Tube</h3>
                 
-                    <h4 class="problem-links problem-links-2000-2">
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2000-2-p.pdf">Problem</a></span>
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2000-2-s.pdf">Solution</a></span>
-                    </h4>
-                
+            <h4 class="problem-links">
+                <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2000-2-p.pdf">Probleme</a></span>
+                <span class="problem-link-s"><a target="_blank" href="/files/en/ipho/th/2000-2-s.pdf">Soluții</a></span>
+            </h4>
+        
                 <p class="problem-topics problem-topics-2000-2">
                     
                             <span class="problem-topic topic-mag">Magnetism</span> 
@@ -1482,14 +1520,14 @@
             <li class="problem-container">    
                 <h3 class="problem-title problem-title-2000-3">Gravitational Waves</h3>
                 
-                    <h4 class="problem-links problem-links-2000-3">
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2000-3-p.pdf">Problem</a></span>
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2000-3-s.pdf">Solution</a></span>
-                    </h4>
-                
+            <h4 class="problem-links">
+                <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/2000-3-p.pdf">Probleme</a></span>
+                <span class="problem-link-s"><a target="_blank" href="/files/en/ipho/th/2000-3-s.pdf">Soluții</a></span>
+            </h4>
+        
                 <p class="problem-topics problem-topics-2000-3">
                     
-                            <span class="problem-topic topic-grav">Gravity</span> 
+                            <span class="problem-topic topic-grav">Gravitație</span> 
                         
                 </p>
                 
@@ -1499,13 +1537,13 @@
             </li>
         
             <li class="year-container year-container-1999">
-                <h1 class="year-title year-title-1999">1999</h1>
+                <h1 class="year-title">1999</h1>
                 
-                    <img class="country-image country-image-1999" height="17" src="https://countryflagsapi.com/png/ITA" />
+                    <img class="country-image" height="17" src="https://countryflagsapi.com/png/ita" />
                 
-                    <h3 class="country-name country-1999">
+                    <h3 class="country-name">
                         <span>
-                            ITA
+                            Italia
                         </span>
                     </h3>
                 
@@ -1518,16 +1556,16 @@
             <li class="problem-container">    
                 <h3 class="problem-title problem-title-1999-1">Absorption in Gas</h3>
                 
-                    <h4 class="problem-links problem-links-1999-1">
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1999-1-p.pdf">Problem</a></span>
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1999-1-s.pdf">Solution</a></span>
-                    </h4>
-                
+            <h4 class="problem-links">
+                <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1999-1-p.pdf">Probleme</a></span>
+                <span class="problem-link-s"><a target="_blank" href="/files/en/ipho/th/1999-1-s.pdf">Soluții</a></span>
+            </h4>
+        
                 <p class="problem-topics problem-topics-1999-1">
                     
-                            <span class="problem-topic topic-thermo">Thermo.</span> 
+                            <span class="problem-topic topic-thermo">Termo.</span> 
                         
-                            <span class="problem-topic topic-other">Other</span> 
+                            <span class="problem-topic topic-other">Altele</span> 
                         
                 </p>
                 
@@ -1536,11 +1574,11 @@
             <li class="problem-container">    
                 <h3 class="problem-title problem-title-1999-2">Magnetic Field</h3>
                 
-                    <h4 class="problem-links problem-links-1999-2">
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1999-2-p.pdf">Problem</a></span>
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1999-2-s.pdf">Solution</a></span>
-                    </h4>
-                
+            <h4 class="problem-links">
+                <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1999-2-p.pdf">Probleme</a></span>
+                <span class="problem-link-s"><a target="_blank" href="/files/en/ipho/th/1999-2-s.pdf">Soluții</a></span>
+            </h4>
+        
                 <p class="problem-topics problem-topics-1999-2">
                     
                             <span class="problem-topic topic-mag">Magnetism</span> 
@@ -1552,14 +1590,14 @@
             <li class="problem-container">    
                 <h3 class="problem-title problem-title-1999-3">Space Probe</h3>
                 
-                    <h4 class="problem-links problem-links-1999-3">
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1999-3-p.pdf">Problem</a></span>
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1999-3-s.pdf">Solution</a></span>
-                    </h4>
-                
+            <h4 class="problem-links">
+                <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1999-3-p.pdf">Probleme</a></span>
+                <span class="problem-link-s"><a target="_blank" href="/files/en/ipho/th/1999-3-s.pdf">Soluții</a></span>
+            </h4>
+        
                 <p class="problem-topics problem-topics-1999-3">
                     
-                            <span class="problem-topic topic-grav">Gravity</span> 
+                            <span class="problem-topic topic-grav">Gravitație</span> 
                         
                 </p>
                 
@@ -1569,13 +1607,13 @@
             </li>
         
             <li class="year-container year-container-1998">
-                <h1 class="year-title year-title-1998">1998</h1>
+                <h1 class="year-title">1998</h1>
                 
-                    <img class="country-image country-image-1998" height="17" src="https://countryflagsapi.com/png/ISL" />
+                    <img class="country-image" height="17" src="https://countryflagsapi.com/png/isl" />
                 
-                    <h3 class="country-name country-1998">
+                    <h3 class="country-name">
                         <span>
-                            ISL
+                            Islanda
                         </span>
                     </h3>
                 
@@ -1588,14 +1626,14 @@
             <li class="problem-container">    
                 <h3 class="problem-title problem-title-1998-1">Rolling Hexagon</h3>
                 
-                    <h4 class="problem-links problem-links-1998-1">
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1998-1-p.pdf">Problem</a></span>
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1998-1-s.pdf">Solution</a></span>
-                    </h4>
-                
+            <h4 class="problem-links">
+                <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1998-1-p.pdf">Probleme</a></span>
+                <span class="problem-link-s"><a target="_blank" href="/files/en/ipho/th/1998-1-s.pdf">Soluții</a></span>
+            </h4>
+        
                 <p class="problem-topics problem-topics-1998-1">
                     
-                            <span class="problem-topic topic-mech">Mechanics</span> 
+                            <span class="problem-topic topic-mech">Mecanică</span> 
                         
                 </p>
                 
@@ -1605,14 +1643,14 @@
             <li class="problem-container">    
                 <h3 class="problem-title problem-title-1998-2">Water Under Ice</h3>
                 
-                    <h4 class="problem-links problem-links-1998-2">
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1998-2-p.pdf">Problem</a></span>
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1998-2-s.pdf">Solution</a></span>
-                    </h4>
-                
+            <h4 class="problem-links">
+                <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1998-2-p.pdf">Probleme</a></span>
+                <span class="problem-link-s"><a target="_blank" href="/files/en/ipho/th/1998-2-s.pdf">Soluții</a></span>
+            </h4>
+        
                 <p class="problem-topics problem-topics-1998-2">
                     
-                            <span class="problem-topic topic-thermo">Thermo.</span> 
+                            <span class="problem-topic topic-thermo">Termo.</span> 
                         
                 </p>
                 
@@ -1622,14 +1660,14 @@
             <li class="problem-container">    
                 <h3 class="problem-title problem-title-1998-3">Faster than Light</h3>
                 
-                    <h4 class="problem-links problem-links-1998-3">
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1998-3-p.pdf">Problem</a></span>
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1998-3-s.pdf">Solution</a></span>
-                    </h4>
-                
+            <h4 class="problem-links">
+                <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1998-3-p.pdf">Probleme</a></span>
+                <span class="problem-link-s"><a target="_blank" href="/files/en/ipho/th/1998-3-s.pdf">Soluții</a></span>
+            </h4>
+        
                 <p class="problem-topics problem-topics-1998-3">
                     
-                            <span class="problem-topic topic-rel">Relativity</span> 
+                            <span class="problem-topic topic-rel">Relativitate</span> 
                         
                 </p>
                 
@@ -1640,13 +1678,13 @@
             </li>
         
             <li class="year-container year-container-1997">
-                <h1 class="year-title year-title-1997">1997</h1>
+                <h1 class="year-title">1997</h1>
                 
-                    <img class="country-image country-image-1997" height="17" src="https://countryflagsapi.com/png/CAN" />
+                    <img class="country-image" height="17" src="https://countryflagsapi.com/png/can" />
                 
-                    <h3 class="country-name country-1997">
+                    <h3 class="country-name">
                         <span>
-                            CAN
+                            Canada
                         </span>
                     </h3>
                 
@@ -1659,14 +1697,14 @@
             <li class="problem-container">    
                 <h3 class="problem-title problem-title-1997-1">Scalings</h3>
                 
-                    <h4 class="problem-links problem-links-1997-1">
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1997-1-p.pdf">Problem</a></span>
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1997-1-s.pdf">Solution</a></span>
-                    </h4>
-                
+            <h4 class="problem-links">
+                <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1997-1-p.pdf">Probleme</a></span>
+                <span class="problem-link-s"><a target="_blank" href="/files/en/ipho/th/1997-1-s.pdf">Soluții</a></span>
+            </h4>
+        
                 <p class="problem-topics problem-topics-1997-1">
                     
-                            <span class="problem-topic topic-thermo">Thermo.</span> 
+                            <span class="problem-topic topic-thermo">Termo.</span> 
                         
                 </p>
                 
@@ -1676,14 +1714,14 @@
             <li class="problem-container">    
                 <h3 class="problem-title problem-title-1997-2">Nuclear Stability</h3>
                 
-                    <h4 class="problem-links problem-links-1997-2">
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1997-2-p.pdf">Problem</a></span>
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1997-2-s.pdf">Solution</a></span>
-                    </h4>
-                
+            <h4 class="problem-links">
+                <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1997-2-p.pdf">Probleme</a></span>
+                <span class="problem-link-s"><a target="_blank" href="/files/en/ipho/th/1997-2-s.pdf">Soluții</a></span>
+            </h4>
+        
                 <p class="problem-topics problem-topics-1997-2">
                     
-                            <span class="problem-topic topic-nuc">Nuclear</span> 
+                            <span class="problem-topic topic-nuc">Nucleară</span> 
                         
                 </p>
                 
@@ -1692,16 +1730,16 @@
             <li class="problem-container">    
                 <h3 class="problem-title problem-title-1997-3">Solar-Powered Aircraft</h3>
                 
-                    <h4 class="problem-links problem-links-1997-3">
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1997-3-p.pdf">Problem</a></span>
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1997-3-s.pdf">Solution</a></span>
-                    </h4>
-                
+            <h4 class="problem-links">
+                <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1997-3-p.pdf">Probleme</a></span>
+                <span class="problem-link-s"><a target="_blank" href="/files/en/ipho/th/1997-3-s.pdf">Soluții</a></span>
+            </h4>
+        
                 <p class="problem-topics problem-topics-1997-3">
                     
-                            <span class="problem-topic topic-mech">Mechanics</span> 
+                            <span class="problem-topic topic-mech">Mecanică</span> 
                         
-                            <span class="problem-topic topic-fluid">Fluids</span> 
+                            <span class="problem-topic topic-fluid">Fluide</span> 
                         
                 </p>
                 
@@ -1711,13 +1749,13 @@
             </li>
         
             <li class="year-container year-container-1996">
-                <h1 class="year-title year-title-1996">1996</h1>
+                <h1 class="year-title">1996</h1>
                 
-                    <img class="country-image country-image-1996" height="17" src="https://countryflagsapi.com/png/NOR" />
+                    <img class="country-image" height="17" src="https://countryflagsapi.com/png/nor" />
                 
-                    <h3 class="country-name country-1996">
+                    <h3 class="country-name">
                         <span>
-                            NOR
+                            Norvegia
                         </span>
                     </h3>
                 
@@ -1730,18 +1768,18 @@
             <li class="problem-container">    
                 <h3 class="problem-title problem-title-1996-1">Five Problems</h3>
                 
-                    <h4 class="problem-links problem-links-1996-1">
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1996-1-p.pdf">Problem</a></span>
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1996-1-s.pdf">Solution</a></span>
-                    </h4>
-                
+            <h4 class="problem-links">
+                <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1996-1-p.pdf">Probleme</a></span>
+                <span class="problem-link-s"><a target="_blank" href="/files/en/ipho/th/1996-1-s.pdf">Soluții</a></span>
+            </h4>
+        
                 <p class="problem-topics problem-topics-1996-1">
                     
-                            <span class="problem-topic topic-circ">Circuits</span> 
+                            <span class="problem-topic topic-circ">Circuite</span> 
                         
-                            <span class="problem-topic topic-mech">Mechanics</span> 
+                            <span class="problem-topic topic-mech">Mecanică</span> 
                         
-                            <span class="problem-topic topic-thermo">Thermo.</span> 
+                            <span class="problem-topic topic-thermo">Termo.</span> 
                         
                             <span class="problem-topic topic-elec">Electro.</span> 
                         
@@ -1753,11 +1791,11 @@
             <li class="problem-container">    
                 <h3 class="problem-title problem-title-1996-2">Electron and Cylinders</h3>
                 
-                    <h4 class="problem-links problem-links-1996-2">
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1996-2-p.pdf">Problem</a></span>
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1996-2-s.pdf">Solution</a></span>
-                    </h4>
-                
+            <h4 class="problem-links">
+                <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1996-2-p.pdf">Probleme</a></span>
+                <span class="problem-link-s"><a target="_blank" href="/files/en/ipho/th/1996-2-s.pdf">Soluții</a></span>
+            </h4>
+        
                 <p class="problem-topics problem-topics-1996-2">
                     
                             <span class="problem-topic topic-mag">Magnetism</span> 
@@ -1770,14 +1808,14 @@
             <li class="problem-container">    
                 <h3 class="problem-title problem-title-1996-3">Moon and Tides</h3>
                 
-                    <h4 class="problem-links problem-links-1996-3">
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1996-3-p.pdf">Problem</a></span>
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1996-3-s.pdf">Solution</a></span>
-                    </h4>
-                
+            <h4 class="problem-links">
+                <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1996-3-p.pdf">Probleme</a></span>
+                <span class="problem-link-s"><a target="_blank" href="/files/en/ipho/th/1996-3-s.pdf">Soluții</a></span>
+            </h4>
+        
                 <p class="problem-topics problem-topics-1996-3">
                     
-                            <span class="problem-topic topic-grav">Gravity</span> 
+                            <span class="problem-topic topic-grav">Gravitație</span> 
                         
                 </p>
                 
@@ -1787,13 +1825,13 @@
             </li>
         
             <li class="year-container year-container-1995">
-                <h1 class="year-title year-title-1995">1995</h1>
+                <h1 class="year-title">1995</h1>
                 
-                    <img class="country-image country-image-1995" height="17" src="https://countryflagsapi.com/png/AUS" />
+                    <img class="country-image" height="17" src="https://countryflagsapi.com/png/aus" />
                 
-                    <h3 class="country-name country-1995">
+                    <h3 class="country-name">
                         <span>
-                            AUS
+                            Australia
                         </span>
                     </h3>
                 
@@ -1806,14 +1844,14 @@
             <li class="problem-container">    
                 <h3 class="problem-title problem-title-1995-1">Gravitational Red Shift</h3>
                 
-                    <h4 class="problem-links problem-links-1995-1">
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1995-1-p.pdf">Problem</a></span>
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1995-1-s.pdf">Solution</a></span>
-                    </h4>
-                
+            <h4 class="problem-links">
+                <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1995-1-p.pdf">Probleme</a></span>
+                <span class="problem-link-s"><a target="_blank" href="/files/en/ipho/th/1995-1-s.pdf">Soluții</a></span>
+            </h4>
+        
                 <p class="problem-topics problem-topics-1995-1">
                     
-                            <span class="problem-topic topic-other">Other</span> 
+                            <span class="problem-topic topic-other">Altele</span> 
                         
                 </p>
                 
@@ -1823,14 +1861,14 @@
             <li class="problem-container">    
                 <h3 class="problem-title problem-title-1995-2">Sound Propagation</h3>
                 
-                    <h4 class="problem-links problem-links-1995-2">
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1995-2-p.pdf">Problem</a></span>
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1995-2-s.pdf">Solution</a></span>
-                    </h4>
-                
+            <h4 class="problem-links">
+                <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1995-2-p.pdf">Probleme</a></span>
+                <span class="problem-link-s"><a target="_blank" href="/files/en/ipho/th/1995-2-s.pdf">Soluții</a></span>
+            </h4>
+        
                 <p class="problem-topics problem-topics-1995-2">
                     
-                            <span class="problem-topic topic-waves">Waves</span> 
+                            <span class="problem-topic topic-waves">Unde</span> 
                         
                 </p>
                 
@@ -1840,14 +1878,14 @@
             <li class="problem-container">    
                 <h3 class="problem-title problem-title-1995-3">Cylindrical Buoy</h3>
                 
-                    <h4 class="problem-links problem-links-1995-3">
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1995-3-p.pdf">Problem</a></span>
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1995-3-s.pdf">Solution</a></span>
-                    </h4>
-                
+            <h4 class="problem-links">
+                <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1995-3-p.pdf">Probleme</a></span>
+                <span class="problem-link-s"><a target="_blank" href="/files/en/ipho/th/1995-3-s.pdf">Soluții</a></span>
+            </h4>
+        
                 <p class="problem-topics problem-topics-1995-3">
                     
-                            <span class="problem-topic topic-mech">Mechanics</span> 
+                            <span class="problem-topic topic-mech">Mecanică</span> 
                         
                 </p>
                 
@@ -1857,13 +1895,13 @@
             </li>
         
             <li class="year-container year-container-1994">
-                <h1 class="year-title year-title-1994">1994</h1>
+                <h1 class="year-title">1994</h1>
                 
-                    <img class="country-image country-image-1994" height="17" src="https://countryflagsapi.com/png/CHN" />
+                    <img class="country-image" height="17" src="https://countryflagsapi.com/png/chn" />
                 
-                    <h3 class="country-name country-1994">
+                    <h3 class="country-name">
                         <span>
-                            CHN
+                            China
                         </span>
                     </h3>
                 
@@ -1876,14 +1914,14 @@
             <li class="problem-container">    
                 <h3 class="problem-title problem-title-1994-1">Relativistic Particle</h3>
                 
-                    <h4 class="problem-links problem-links-1994-1">
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1994-1-p.pdf">Problem</a></span>
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1994-1-s.pdf">Solution</a></span>
-                    </h4>
-                
+            <h4 class="problem-links">
+                <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1994-1-p.pdf">Probleme</a></span>
+                <span class="problem-link-s"><a target="_blank" href="/files/en/ipho/th/1994-1-s.pdf">Soluții</a></span>
+            </h4>
+        
                 <p class="problem-topics problem-topics-1994-1">
                     
-                            <span class="problem-topic topic-rel">Relativity</span> 
+                            <span class="problem-topic topic-rel">Relativitate</span> 
                         
                 </p>
                 
@@ -1893,14 +1931,14 @@
             <li class="problem-container">    
                 <h3 class="problem-title problem-title-1994-2">Superconductor</h3>
                 
-                    <h4 class="problem-links problem-links-1994-2">
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1994-2-p.pdf">Problem</a></span>
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1994-2-s.pdf">Solution</a></span>
-                    </h4>
-                
+            <h4 class="problem-links">
+                <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1994-2-p.pdf">Probleme</a></span>
+                <span class="problem-link-s"><a target="_blank" href="/files/en/ipho/th/1994-2-s.pdf">Soluții</a></span>
+            </h4>
+        
                 <p class="problem-topics problem-topics-1994-2">
                     
-                            <span class="problem-topic topic-circ">Circuits</span> 
+                            <span class="problem-topic topic-circ">Circuite</span> 
                         
                 </p>
                 
@@ -1910,14 +1948,14 @@
             <li class="problem-container">    
                 <h3 class="problem-title problem-title-1994-3">Collision of Discs</h3>
                 
-                    <h4 class="problem-links problem-links-1994-3">
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1994-3-p.pdf">Problem</a></span>
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1994-3-s.pdf">Solution</a></span>
-                    </h4>
-                
+            <h4 class="problem-links">
+                <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1994-3-p.pdf">Probleme</a></span>
+                <span class="problem-link-s"><a target="_blank" href="/files/en/ipho/th/1994-3-s.pdf">Soluții</a></span>
+            </h4>
+        
                 <p class="problem-topics problem-topics-1994-3">
                     
-                            <span class="problem-topic topic-mech">Mechanics</span> 
+                            <span class="problem-topic topic-mech">Mecanică</span> 
                         
                 </p>
                 
@@ -1927,13 +1965,13 @@
             </li>
         
             <li class="year-container year-container-1993">
-                <h1 class="year-title year-title-1993">1993</h1>
+                <h1 class="year-title">1993</h1>
                 
-                    <img class="country-image country-image-1993" height="17" src="https://countryflagsapi.com/png/USA" />
+                    <img class="country-image" height="17" src="https://countryflagsapi.com/png/usa" />
                 
-                    <h3 class="country-name country-1993">
+                    <h3 class="country-name">
                         <span>
-                            USA
+                            Statele Unite
                         </span>
                     </h3>
                 
@@ -1946,14 +1984,14 @@
             <li class="problem-container">    
                 <h3 class="problem-title problem-title-1993-1">Atmospheric Electricity</h3>
                 
-                    <h4 class="problem-links problem-links-1993-1">
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1993-1-p.pdf">Problem</a></span>
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1993-1-s.pdf">Solution</a></span>
-                    </h4>
-                
+            <h4 class="problem-links">
+                <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1993-1-p.pdf">Probleme</a></span>
+                <span class="problem-link-s"><a target="_blank" href="/files/en/ipho/th/1993-1-s.pdf">Soluții</a></span>
+            </h4>
+        
                 <p class="problem-topics problem-topics-1993-1">
                     
-                            <span class="problem-topic topic-thermo">Thermo.</span> 
+                            <span class="problem-topic topic-thermo">Termo.</span> 
                         
                             <span class="problem-topic topic-elec">Electro.</span> 
                         
@@ -1965,14 +2003,14 @@
             <li class="problem-container">    
                 <h3 class="problem-title problem-title-1993-2">Laser Forces</h3>
                 
-                    <h4 class="problem-links problem-links-1993-2">
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1993-2-p.pdf">Problem</a></span>
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1993-2-s.pdf">Solution</a></span>
-                    </h4>
-                
+            <h4 class="problem-links">
+                <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1993-2-p.pdf">Probleme</a></span>
+                <span class="problem-link-s"><a target="_blank" href="/files/en/ipho/th/1993-2-s.pdf">Soluții</a></span>
+            </h4>
+        
                 <p class="problem-topics problem-topics-1993-2">
                     
-                            <span class="problem-topic topic-opt">Optics</span> 
+                            <span class="problem-topic topic-opt">Optică</span> 
                         
                 </p>
                 
@@ -1981,11 +2019,11 @@
             <li class="problem-container">    
                 <h3 class="problem-title problem-title-1993-3">Electron Beam</h3>
                 
-                    <h4 class="problem-links problem-links-1993-3">
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1993-3-p.pdf">Problem</a></span>
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1993-3-s.pdf">Solution</a></span>
-                    </h4>
-                
+            <h4 class="problem-links">
+                <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1993-3-p.pdf">Probleme</a></span>
+                <span class="problem-link-s"><a target="_blank" href="/files/en/ipho/th/1993-3-s.pdf">Soluții</a></span>
+            </h4>
+        
                 <p class="problem-topics problem-topics-1993-3">
                     
                             <span class="problem-topic topic-elec">Electro.</span> 
@@ -1999,13 +2037,13 @@
             </li>
         
             <li class="year-container year-container-1992">
-                <h1 class="year-title year-title-1992">1992</h1>
+                <h1 class="year-title">1992</h1>
                 
-                    <img class="country-image country-image-1992" height="17" src="https://countryflagsapi.com/png/FIN" />
+                    <img class="country-image" height="17" src="https://countryflagsapi.com/png/fin" />
                 
-                    <h3 class="country-name country-1992">
+                    <h3 class="country-name">
                         <span>
-                            FIN
+                            Finlanda
                         </span>
                     </h3>
                 
@@ -2018,14 +2056,14 @@
             <li class="problem-container">    
                 <h3 class="problem-title problem-title-1992-1">Rotating Satellite</h3>
                 
-                    <h4 class="problem-links problem-links-1992-1">
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1992-1-p.pdf">Problem</a></span>
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1992-1-s.pdf">Solution</a></span>
-                    </h4>
-                
+            <h4 class="problem-links">
+                <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1992-1-p.pdf">Probleme</a></span>
+                <span class="problem-link-s"><a target="_blank" href="/files/en/ipho/th/1992-1-s.pdf">Soluții</a></span>
+            </h4>
+        
                 <p class="problem-topics problem-topics-1992-1">
                     
-                            <span class="problem-topic topic-grav">Gravity</span> 
+                            <span class="problem-topic topic-grav">Gravitație</span> 
                         
                 </p>
                 
@@ -2034,14 +2072,14 @@
             <li class="problem-container">    
                 <h3 class="problem-title problem-title-1992-2">Oscillating Molecule</h3>
                 
-                    <h4 class="problem-links problem-links-1992-2">
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1992-2-p.pdf">Problem</a></span>
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1992-2-s.pdf">Solution</a></span>
-                    </h4>
-                
+            <h4 class="problem-links">
+                <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1992-2-p.pdf">Probleme</a></span>
+                <span class="problem-link-s"><a target="_blank" href="/files/en/ipho/th/1992-2-s.pdf">Soluții</a></span>
+            </h4>
+        
                 <p class="problem-topics problem-topics-1992-2">
                     
-                            <span class="problem-topic topic-osc">Oscillations</span> 
+                            <span class="problem-topic topic-osc">Oscilații</span> 
                         
                 </p>
                 
@@ -2051,14 +2089,14 @@
             <li class="problem-container">    
                 <h3 class="problem-title problem-title-1992-3">Satellite in Sunshine</h3>
                 
-                    <h4 class="problem-links problem-links-1992-3">
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1992-3-p.pdf">Problem</a></span>
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1992-3-s.pdf">Solution</a></span>
-                    </h4>
-                
+            <h4 class="problem-links">
+                <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1992-3-p.pdf">Probleme</a></span>
+                <span class="problem-link-s"><a target="_blank" href="/files/en/ipho/th/1992-3-s.pdf">Soluții</a></span>
+            </h4>
+        
                 <p class="problem-topics problem-topics-1992-3">
                     
-                            <span class="problem-topic topic-thermo">Thermo.</span> 
+                            <span class="problem-topic topic-thermo">Termo.</span> 
                         
                 </p>
                 
@@ -2069,13 +2107,13 @@
             </li>
         
             <li class="year-container year-container-1991">
-                <h1 class="year-title year-title-1991">1991</h1>
+                <h1 class="year-title">1991</h1>
                 
-                    <img class="country-image country-image-1991" height="17" src="https://countryflagsapi.com/png/CUB" />
+                    <img class="country-image" height="17" src="https://countryflagsapi.com/png/cub" />
                 
-                    <h3 class="country-name country-1991">
+                    <h3 class="country-name">
                         <span>
-                            CUB
+                            Cuba
                         </span>
                     </h3>
                 
@@ -2088,14 +2126,14 @@
             <li class="problem-container">    
                 <h3 class="problem-title problem-title-1991-1">Friction on Impact</h3>
                 
-                    <h4 class="problem-links problem-links-1991-1">
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1991-1-p.pdf">Problem</a></span>
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1991-1-s.pdf">Solution</a></span>
-                    </h4>
-                
+            <h4 class="problem-links">
+                <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1991-1-p.pdf">Probleme</a></span>
+                <span class="problem-link-s"><a target="_blank" href="/files/en/ipho/th/1991-1-s.pdf">Soluții</a></span>
+            </h4>
+        
                 <p class="problem-topics problem-topics-1991-1">
                     
-                            <span class="problem-topic topic-mech">Mechanics</span> 
+                            <span class="problem-topic topic-mech">Mecanică</span> 
                         
                             <span class="problem-topic topic-elec">Electro.</span> 
                         
@@ -2107,14 +2145,14 @@
             <li class="problem-container">    
                 <h3 class="problem-title problem-title-1991-2">Relativistic Square</h3>
                 
-                    <h4 class="problem-links problem-links-1991-2">
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1991-2-p.pdf">Problem</a></span>
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1991-2-s.pdf">Solution</a></span>
-                    </h4>
-                
+            <h4 class="problem-links">
+                <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1991-2-p.pdf">Probleme</a></span>
+                <span class="problem-link-s"><a target="_blank" href="/files/en/ipho/th/1991-2-s.pdf">Soluții</a></span>
+            </h4>
+        
                 <p class="problem-topics problem-topics-1991-2">
                     
-                            <span class="problem-topic topic-rel">Relativity</span> 
+                            <span class="problem-topic topic-rel">Relativitate</span> 
                         
                 </p>
                 
@@ -2123,16 +2161,16 @@
             <li class="problem-container">    
                 <h3 class="problem-title problem-title-1991-3">Laser Cooling</h3>
                 
-                    <h4 class="problem-links problem-links-1991-3">
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1991-3-p.pdf">Problem</a></span>
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1991-3-s.pdf">Solution</a></span>
-                    </h4>
-                
+            <h4 class="problem-links">
+                <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1991-3-p.pdf">Probleme</a></span>
+                <span class="problem-link-s"><a target="_blank" href="/files/en/ipho/th/1991-3-s.pdf">Soluții</a></span>
+            </h4>
+        
                 <p class="problem-topics problem-topics-1991-3">
                     
-                            <span class="problem-topic topic-nuc">Nuclear</span> 
+                            <span class="problem-topic topic-nuc">Nucleară</span> 
                         
-                            <span class="problem-topic topic-quantum">Quantum</span> 
+                            <span class="problem-topic topic-quantum">Cuantică</span> 
                         
                 </p>
                 
@@ -2142,13 +2180,13 @@
             </li>
         
             <li class="year-container year-container-1990">
-                <h1 class="year-title year-title-1990">1990</h1>
+                <h1 class="year-title">1990</h1>
                 
-                    <img class="country-image country-image-1990" height="17" src="https://countryflagsapi.com/png/NLD" />
+                    <img class="country-image" height="17" src="https://countryflagsapi.com/png/nld" />
                 
-                    <h3 class="country-name country-1990">
+                    <h3 class="country-name">
                         <span>
-                            NLD
+                            Țările de Jos
                         </span>
                     </h3>
                 
@@ -2161,16 +2199,16 @@
             <li class="problem-container">    
                 <h3 class="problem-title problem-title-1990-1">X-ray Diffraction</h3>
                 
-                    <h4 class="problem-links problem-links-1990-1">
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1990-1-p.pdf">Problem</a></span>
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1990-1-s.pdf">Solution</a></span>
-                    </h4>
-                
+            <h4 class="problem-links">
+                <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1990-1-p.pdf">Probleme</a></span>
+                <span class="problem-link-s"><a target="_blank" href="/files/en/ipho/th/1990-1-s.pdf">Soluții</a></span>
+            </h4>
+        
                 <p class="problem-topics problem-topics-1990-1">
                     
-                            <span class="problem-topic topic-opt">Optics</span> 
+                            <span class="problem-topic topic-opt">Optică</span> 
                         
-                            <span class="problem-topic topic-other">Other</span> 
+                            <span class="problem-topic topic-other">Altele</span> 
                         
                 </p>
                 
@@ -2180,11 +2218,11 @@
             <li class="problem-container">    
                 <h3 class="problem-title problem-title-1990-2">Magnetosphere</h3>
                 
-                    <h4 class="problem-links problem-links-1990-2">
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1990-2-p.pdf">Problem</a></span>
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1990-2-s.pdf">Solution</a></span>
-                    </h4>
-                
+            <h4 class="problem-links">
+                <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1990-2-p.pdf">Probleme</a></span>
+                <span class="problem-link-s"><a target="_blank" href="/files/en/ipho/th/1990-2-s.pdf">Soluții</a></span>
+            </h4>
+        
                 <p class="problem-topics problem-topics-1990-2">
                     
                             <span class="problem-topic topic-mag">Magnetism</span> 
@@ -2196,16 +2234,16 @@
             <li class="problem-container">    
                 <h3 class="problem-title problem-title-1990-3">Rotating Neutron Star</h3>
                 
-                    <h4 class="problem-links problem-links-1990-3">
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1990-3-p.pdf">Problem</a></span>
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1990-3-s.pdf">Solution</a></span>
-                    </h4>
-                
+            <h4 class="problem-links">
+                <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1990-3-p.pdf">Probleme</a></span>
+                <span class="problem-link-s"><a target="_blank" href="/files/en/ipho/th/1990-3-s.pdf">Soluții</a></span>
+            </h4>
+        
                 <p class="problem-topics problem-topics-1990-3">
                     
-                            <span class="problem-topic topic-mech">Mechanics</span> 
+                            <span class="problem-topic topic-mech">Mecanică</span> 
                         
-                            <span class="problem-topic topic-other">Other</span> 
+                            <span class="problem-topic topic-other">Altele</span> 
                         
                 </p>
                 
@@ -2216,13 +2254,13 @@
             </li>
         
             <li class="year-container year-container-1989">
-                <h1 class="year-title year-title-1989">1989</h1>
+                <h1 class="year-title">1989</h1>
                 
-                    <img class="country-image country-image-1989" height="17" src="https://countryflagsapi.com/png/POL" />
+                    <img class="country-image" height="17" src="https://countryflagsapi.com/png/pol" />
                 
-                    <h3 class="country-name country-1989">
+                    <h3 class="country-name">
                         <span>
-                            POL
+                            Polonia
                         </span>
                     </h3>
                 
@@ -2235,14 +2273,14 @@
             <li class="problem-container">    
                 <h3 class="problem-title problem-title-1989-1">Boiling Liquids</h3>
                 
-                    <h4 class="problem-links problem-links-1989-1">
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1989-1-p.pdf">Problem</a></span>
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1989-1-s.pdf">Solution</a></span>
-                    </h4>
-                
+            <h4 class="problem-links">
+                <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1989-1-p.pdf">Probleme</a></span>
+                <span class="problem-link-s"><a target="_blank" href="/files/en/ipho/th/1989-1-s.pdf">Soluții</a></span>
+            </h4>
+        
                 <p class="problem-topics problem-topics-1989-1">
                     
-                            <span class="problem-topic topic-thermo">Thermo.</span> 
+                            <span class="problem-topic topic-thermo">Termo.</span> 
                         
                 </p>
                 
@@ -2251,14 +2289,14 @@
             <li class="problem-container">    
                 <h3 class="problem-title problem-title-1989-2">Rotating Masses</h3>
                 
-                    <h4 class="problem-links problem-links-1989-2">
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1989-2-p.pdf">Problem</a></span>
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1989-2-s.pdf">Solution</a></span>
-                    </h4>
-                
+            <h4 class="problem-links">
+                <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1989-2-p.pdf">Probleme</a></span>
+                <span class="problem-link-s"><a target="_blank" href="/files/en/ipho/th/1989-2-s.pdf">Soluții</a></span>
+            </h4>
+        
                 <p class="problem-topics problem-topics-1989-2">
                     
-                            <span class="problem-topic topic-grav">Gravity</span> 
+                            <span class="problem-topic topic-grav">Gravitație</span> 
                         
                 </p>
                 
@@ -2268,16 +2306,16 @@
             <li class="problem-container">    
                 <h3 class="problem-title problem-title-1989-3">Proton Microscope</h3>
                 
-                    <h4 class="problem-links problem-links-1989-3">
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1989-3-p.pdf">Problem</a></span>
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1989-3-s.pdf">Solution</a></span>
-                    </h4>
-                
+            <h4 class="problem-links">
+                <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1989-3-p.pdf">Probleme</a></span>
+                <span class="problem-link-s"><a target="_blank" href="/files/en/ipho/th/1989-3-s.pdf">Soluții</a></span>
+            </h4>
+        
                 <p class="problem-topics problem-topics-1989-3">
                     
-                            <span class="problem-topic topic-rel">Relativity</span> 
+                            <span class="problem-topic topic-rel">Relativitate</span> 
                         
-                            <span class="problem-topic topic-other">Other</span> 
+                            <span class="problem-topic topic-other">Altele</span> 
                         
                 </p>
                 
@@ -2287,13 +2325,13 @@
             </li>
         
             <li class="year-container year-container-1988">
-                <h1 class="year-title year-title-1988">1988</h1>
+                <h1 class="year-title">1988</h1>
                 
-                    <img class="country-image country-image-1988" height="17" src="https://countryflagsapi.com/png/AUT" />
+                    <img class="country-image" height="17" src="https://countryflagsapi.com/png/aut" />
                 
-                    <h3 class="country-name country-1988">
+                    <h3 class="country-name">
                         <span>
-                            AUT
+                            Austria
                         </span>
                     </h3>
                 
@@ -2306,16 +2344,16 @@
             <li class="problem-container">    
                 <h3 class="problem-title problem-title-1988-1">Particle Velocities</h3>
                 
-                    <h4 class="problem-links problem-links-1988-1">
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1988-1-p.pdf">Problem</a></span>
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1988-1-s.pdf">Solution</a></span>
-                    </h4>
-                
+            <h4 class="problem-links">
+                <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1988-1-p.pdf">Probleme</a></span>
+                <span class="problem-link-s"><a target="_blank" href="/files/en/ipho/th/1988-1-s.pdf">Soluții</a></span>
+            </h4>
+        
                 <p class="problem-topics problem-topics-1988-1">
                     
-                            <span class="problem-topic topic-nuc">Nuclear</span> 
+                            <span class="problem-topic topic-nuc">Nucleară</span> 
                         
-                            <span class="problem-topic topic-rel">Relativity</span> 
+                            <span class="problem-topic topic-rel">Relativitate</span> 
                         
                 </p>
                 
@@ -2324,11 +2362,11 @@
             <li class="problem-container">    
                 <h3 class="problem-title problem-title-1988-2">Maxwell's Wheel</h3>
                 
-                    <h4 class="problem-links problem-links-1988-2">
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1988-2-p.pdf">Problem</a></span>
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1988-2-s.pdf">Solution</a></span>
-                    </h4>
-                
+            <h4 class="problem-links">
+                <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1988-2-p.pdf">Probleme</a></span>
+                <span class="problem-link-s"><a target="_blank" href="/files/en/ipho/th/1988-2-s.pdf">Soluții</a></span>
+            </h4>
+        
                 <p class="problem-topics problem-topics-1988-2">
                     
                 </p>
@@ -2339,11 +2377,11 @@
             <li class="problem-container">    
                 <h3 class="problem-title problem-title-1988-3">Recombination of Ions</h3>
                 
-                    <h4 class="problem-links problem-links-1988-3">
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1988-3-p.pdf">Problem</a></span>
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1988-3-s.pdf">Solution</a></span>
-                    </h4>
-                
+            <h4 class="problem-links">
+                <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1988-3-p.pdf">Probleme</a></span>
+                <span class="problem-link-s"><a target="_blank" href="/files/en/ipho/th/1988-3-s.pdf">Soluții</a></span>
+            </h4>
+        
                 <p class="problem-topics problem-topics-1988-3">
                     
                 </p>
@@ -2354,13 +2392,13 @@
             </li>
         
             <li class="year-container year-container-1987">
-                <h1 class="year-title year-title-1987">1987</h1>
+                <h1 class="year-title">1987</h1>
                 
-                    <img class="country-image country-image-1987" height="17" src="https://countryflagsapi.com/png/EDE" />
+                    <img class="country-image" height="17" src="/public/images/c-ede.png" />
                 
-                    <h3 class="country-name country-1987">
+                    <h3 class="country-name">
                         <span>
-                            EDE
+                            Germania de Est
                         </span>
                     </h3>
                 
@@ -2373,14 +2411,14 @@
             <li class="problem-container">    
                 <h3 class="problem-title problem-title-1987-1">Ascending Moist Air</h3>
                 
-                    <h4 class="problem-links problem-links-1987-1">
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1987-1-p.pdf">Problem</a></span>
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1987-1-s.pdf">Solution</a></span>
-                    </h4>
-                
+            <h4 class="problem-links">
+                <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1987-1-p.pdf">Probleme</a></span>
+                <span class="problem-link-s"><a target="_blank" href="/files/en/ipho/th/1987-1-s.pdf">Soluții</a></span>
+            </h4>
+        
                 <p class="problem-topics problem-topics-1987-1">
                     
-                            <span class="problem-topic topic-thermo">Thermo.</span> 
+                            <span class="problem-topic topic-thermo">Termo.</span> 
                         
                 </p>
                 
@@ -2390,11 +2428,11 @@
             <li class="problem-container">    
                 <h3 class="problem-title problem-title-1987-2">Electrons in B-field</h3>
                 
-                    <h4 class="problem-links problem-links-1987-2">
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1987-2-p.pdf">Problem</a></span>
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1987-2-s.pdf">Solution</a></span>
-                    </h4>
-                
+            <h4 class="problem-links">
+                <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1987-2-p.pdf">Probleme</a></span>
+                <span class="problem-link-s"><a target="_blank" href="/files/en/ipho/th/1987-2-s.pdf">Soluții</a></span>
+            </h4>
+        
                 <p class="problem-topics problem-topics-1987-2">
                     
                             <span class="problem-topic topic-mag">Magnetism</span> 
@@ -2406,14 +2444,14 @@
             <li class="problem-container">    
                 <h3 class="problem-title problem-title-1987-3">Infinite LC-grid</h3>
                 
-                    <h4 class="problem-links problem-links-1987-3">
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1987-3-p.pdf">Problem</a></span>
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1987-3-s.pdf">Solution</a></span>
-                    </h4>
-                
+            <h4 class="problem-links">
+                <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1987-3-p.pdf">Probleme</a></span>
+                <span class="problem-link-s"><a target="_blank" href="/files/en/ipho/th/1987-3-s.pdf">Soluții</a></span>
+            </h4>
+        
                 <p class="problem-topics problem-topics-1987-3">
                     
-                            <span class="problem-topic topic-circ">Circuits</span> 
+                            <span class="problem-topic topic-circ">Circuite</span> 
                         
                 </p>
                 
@@ -2424,13 +2462,13 @@
             </li>
         
             <li class="year-container year-container-1986">
-                <h1 class="year-title year-title-1986">1986</h1>
+                <h1 class="year-title">1986</h1>
                 
-                    <img class="country-image country-image-1986" height="17" src="https://countryflagsapi.com/png/GBR" />
+                    <img class="country-image" height="17" src="https://countryflagsapi.com/png/gbr" />
                 
-                    <h3 class="country-name country-1986">
+                    <h3 class="country-name">
                         <span>
-                            GBR
+                            Regatul Unit
                         </span>
                     </h3>
                 
@@ -2443,14 +2481,14 @@
             <li class="problem-container">    
                 <h3 class="problem-title problem-title-1986-1">Interference</h3>
                 
-                    <h4 class="problem-links problem-links-1986-1">
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1986-1-p.pdf">Problem</a></span>
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1986-1-s.pdf">Solution</a></span>
-                    </h4>
-                
+            <h4 class="problem-links">
+                <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1986-1-p.pdf">Probleme</a></span>
+                <span class="problem-link-s"><a target="_blank" href="/files/en/ipho/th/1986-1-s.pdf">Soluții</a></span>
+            </h4>
+        
                 <p class="problem-topics problem-topics-1986-1">
                     
-                            <span class="problem-topic topic-opt">Optics</span> 
+                            <span class="problem-topic topic-opt">Optică</span> 
                         
                 </p>
                 
@@ -2459,16 +2497,16 @@
             <li class="problem-container">    
                 <h3 class="problem-title problem-title-1986-2">Seismic Waves</h3>
                 
-                    <h4 class="problem-links problem-links-1986-2">
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1986-2-p.pdf">Problem</a></span>
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1986-2-s.pdf">Solution</a></span>
-                    </h4>
-                
+            <h4 class="problem-links">
+                <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1986-2-p.pdf">Probleme</a></span>
+                <span class="problem-link-s"><a target="_blank" href="/files/en/ipho/th/1986-2-s.pdf">Soluții</a></span>
+            </h4>
+        
                 <p class="problem-topics problem-topics-1986-2">
                     
-                            <span class="problem-topic topic-mech">Mechanics</span> 
+                            <span class="problem-topic topic-mech">Mecanică</span> 
                         
-                            <span class="problem-topic topic-osc">Oscillations</span> 
+                            <span class="problem-topic topic-osc">Oscilații</span> 
                         
                 </p>
                 
@@ -2477,11 +2515,11 @@
             <li class="problem-container">    
                 <h3 class="problem-title problem-title-1986-3">Masses and Springs</h3>
                 
-                    <h4 class="problem-links problem-links-1986-3">
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1986-3-p.pdf">Problem</a></span>
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1986-3-s.pdf">Solution</a></span>
-                    </h4>
-                
+            <h4 class="problem-links">
+                <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1986-3-p.pdf">Probleme</a></span>
+                <span class="problem-link-s"><a target="_blank" href="/files/en/ipho/th/1986-3-s.pdf">Soluții</a></span>
+            </h4>
+        
                 <p class="problem-topics problem-topics-1986-3">
                     
                 </p>
@@ -2492,13 +2530,13 @@
             </li>
         
             <li class="year-container year-container-1985">
-                <h1 class="year-title year-title-1985">1985</h1>
+                <h1 class="year-title">1985</h1>
                 
-                    <img class="country-image country-image-1985" height="17" src="https://countryflagsapi.com/png/YGS" />
+                    <img class="country-image" height="17" src="/public/images/c-ygs.png" />
                 
-                    <h3 class="country-name country-1985">
+                    <h3 class="country-name">
                         <span>
-                            YGS
+                            Yugoslavia
                         </span>
                     </h3>
                 
@@ -2511,11 +2549,11 @@
             <li class="problem-container">    
                 <h3 class="problem-title problem-title-1985-1"></h3>
                 
-                    <h4 class="problem-links problem-links-1985-1">
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1985-1-p.pdf">Problem</a></span>
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1985-1-s.pdf">Solution</a></span>
-                    </h4>
-                
+            <h4 class="problem-links">
+                <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1985-1-p.pdf">Probleme</a></span>
+                <span class="problem-link-s"><a target="_blank" href="/files/en/ipho/th/1985-1-s.pdf">Soluții</a></span>
+            </h4>
+        
                 <p class="problem-topics problem-topics-1985-1">
                     
                 </p>
@@ -2526,11 +2564,11 @@
             <li class="problem-container">    
                 <h3 class="problem-title problem-title-1985-2">undefined</h3>
                 
-                    <h4 class="problem-links problem-links-1985-2">
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1985-2-p.pdf">Problem</a></span>
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1985-2-s.pdf">Solution</a></span>
-                    </h4>
-                
+            <h4 class="problem-links">
+                <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1985-2-p.pdf">Probleme</a></span>
+                <span class="problem-link-s"><a target="_blank" href="/files/en/ipho/th/1985-2-s.pdf">Soluții</a></span>
+            </h4>
+        
                 <p class="problem-topics problem-topics-1985-2">
                     
                 </p>
@@ -2542,13 +2580,13 @@
             </li>
         
             <li class="year-container year-container-1984">
-                <h1 class="year-title year-title-1984">1984</h1>
+                <h1 class="year-title">1984</h1>
                 
-                    <img class="country-image country-image-1984" height="17" src="https://countryflagsapi.com/png/SWE" />
+                    <img class="country-image" height="17" src="https://countryflagsapi.com/png/swe" />
                 
-                    <h3 class="country-name country-1984">
+                    <h3 class="country-name">
                         <span>
-                            SWE
+                            Suedia
                         </span>
                     </h3>
                 
@@ -2561,14 +2599,14 @@
             <li class="problem-container">    
                 <h3 class="problem-title problem-title-1984-1">Mirage</h3>
                 
-                    <h4 class="problem-links problem-links-1984-1">
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1984-1-p.pdf">Problem</a></span>
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1984-1-s.pdf">Solution</a></span>
-                    </h4>
-                
+            <h4 class="problem-links">
+                <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1984-1-p.pdf">Probleme</a></span>
+                <span class="problem-link-s"><a target="_blank" href="/files/en/ipho/th/1984-1-s.pdf">Soluții</a></span>
+            </h4>
+        
                 <p class="problem-topics problem-topics-1984-1">
                     
-                            <span class="problem-topic topic-opt">Optics</span> 
+                            <span class="problem-topic topic-opt">Optică</span> 
                         
                 </p>
                 
@@ -2578,14 +2616,14 @@
             <li class="problem-container">    
                 <h3 class="problem-title problem-title-1984-2">Seiching</h3>
                 
-                    <h4 class="problem-links problem-links-1984-2">
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1984-2-p.pdf">Problem</a></span>
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1984-2-s.pdf">Solution</a></span>
-                    </h4>
-                
+            <h4 class="problem-links">
+                <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1984-2-p.pdf">Probleme</a></span>
+                <span class="problem-link-s"><a target="_blank" href="/files/en/ipho/th/1984-2-s.pdf">Soluții</a></span>
+            </h4>
+        
                 <p class="problem-topics problem-topics-1984-2">
                     
-                            <span class="problem-topic topic-waves">Waves</span> 
+                            <span class="problem-topic topic-waves">Unde</span> 
                         
                 </p>
                 
@@ -2595,14 +2633,14 @@
             <li class="problem-container">    
                 <h3 class="problem-title problem-title-1984-3">Electrical Filter</h3>
                 
-                    <h4 class="problem-links problem-links-1984-3">
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1984-3-p.pdf">Problem</a></span>
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1984-3-s.pdf">Solution</a></span>
-                    </h4>
-                
+            <h4 class="problem-links">
+                <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1984-3-p.pdf">Probleme</a></span>
+                <span class="problem-link-s"><a target="_blank" href="/files/en/ipho/th/1984-3-s.pdf">Soluții</a></span>
+            </h4>
+        
                 <p class="problem-topics problem-topics-1984-3">
                     
-                            <span class="problem-topic topic-circ">Circuits</span> 
+                            <span class="problem-topic topic-circ">Circuite</span> 
                         
                 </p>
                 
@@ -2612,13 +2650,13 @@
             </li>
         
             <li class="year-container year-container-1983">
-                <h1 class="year-title year-title-1983">1983</h1>
+                <h1 class="year-title">1983</h1>
                 
-                    <img class="country-image country-image-1983" height="17" src="https://countryflagsapi.com/png/ROU" />
+                    <img class="country-image" height="17" src="https://countryflagsapi.com/png/rou" />
                 
-                    <h3 class="country-name country-1983">
+                    <h3 class="country-name">
                         <span>
-                            ROU
+                            Romania
                         </span>
                     </h3>
                 
@@ -2631,11 +2669,11 @@
             <li class="problem-container">    
                 <h3 class="problem-title problem-title-1983-1">AC Circuit</h3>
                 
-                    <h4 class="problem-links problem-links-1983-1">
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1983-1-p.pdf">Problem</a></span>
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1983-1-s.pdf">Solution</a></span>
-                    </h4>
-                
+            <h4 class="problem-links">
+                <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1983-1-p.pdf">Probleme</a></span>
+                <span class="problem-link-s"><a target="_blank" href="/files/en/ipho/th/1983-1-s.pdf">Soluții</a></span>
+            </h4>
+        
                 <p class="problem-topics problem-topics-1983-1">
                     
                 </p>
@@ -2645,11 +2683,11 @@
             <li class="problem-container">    
                 <h3 class="problem-title problem-title-1983-2"></h3>
                 
-                    <h4 class="problem-links problem-links-1983-2">
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1983-2-p.pdf">Problem</a></span>
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1983-2-s.pdf">Solution</a></span>
-                    </h4>
-                
+            <h4 class="problem-links">
+                <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1983-2-p.pdf">Probleme</a></span>
+                <span class="problem-link-s"><a target="_blank" href="/files/en/ipho/th/1983-2-s.pdf">Soluții</a></span>
+            </h4>
+        
                 <p class="problem-topics problem-topics-1983-2">
                     
                 </p>
@@ -2660,13 +2698,13 @@
             </li>
         
             <li class="year-container year-container-1982">
-                <h1 class="year-title year-title-1982">1982</h1>
+                <h1 class="year-title">1982</h1>
                 
-                    <img class="country-image country-image-1982" height="17" src="https://countryflagsapi.com/png/WDE" />
+                    <img class="country-image" height="17" src="https://countryflagsapi.com/png/deu" />
                 
-                    <h3 class="country-name country-1982">
+                    <h3 class="country-name">
                         <span>
-                            WDE
+                            Germania de Vest
                         </span>
                     </h3>
                 
@@ -2679,11 +2717,11 @@
             <li class="problem-container">    
                 <h3 class="problem-title problem-title-1982-1">Fluorescent Lamp</h3>
                 
-                    <h4 class="problem-links problem-links-1982-1">
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1982-1-p.pdf">Problem</a></span>
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1982-1-s.pdf">Solution</a></span>
-                    </h4>
-                
+            <h4 class="problem-links">
+                <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1982-1-p.pdf">Probleme</a></span>
+                <span class="problem-link-s"><a target="_blank" href="/files/en/ipho/th/1982-1-s.pdf">Soluții</a></span>
+            </h4>
+        
                 <p class="problem-topics problem-topics-1982-1">
                     
                 </p>
@@ -2693,11 +2731,11 @@
             <li class="problem-container">    
                 <h3 class="problem-title problem-title-1982-2">Physical Pendulum</h3>
                 
-                    <h4 class="problem-links problem-links-1982-2">
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1982-2-p.pdf">Problem</a></span>
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1982-2-s.pdf">Solution</a></span>
-                    </h4>
-                
+            <h4 class="problem-links">
+                <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1982-2-p.pdf">Probleme</a></span>
+                <span class="problem-link-s"><a target="_blank" href="/files/en/ipho/th/1982-2-s.pdf">Soluții</a></span>
+            </h4>
+        
                 <p class="problem-topics problem-topics-1982-2">
                     
                 </p>
@@ -2708,11 +2746,11 @@
             <li class="problem-container">    
                 <h3 class="problem-title problem-title-1982-3">Air Balloon</h3>
                 
-                    <h4 class="problem-links problem-links-1982-3">
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1982-3-p.pdf">Problem</a></span>
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1982-3-s.pdf">Solution</a></span>
-                    </h4>
-                
+            <h4 class="problem-links">
+                <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1982-3-p.pdf">Probleme</a></span>
+                <span class="problem-link-s"><a target="_blank" href="/files/en/ipho/th/1982-3-s.pdf">Soluții</a></span>
+            </h4>
+        
                 <p class="problem-topics problem-topics-1982-3">
                     
                 </p>
@@ -2723,13 +2761,13 @@
             </li>
         
             <li class="year-container year-container-1981">
-                <h1 class="year-title year-title-1981">1981</h1>
+                <h1 class="year-title">1981</h1>
                 
-                    <img class="country-image country-image-1981" height="17" src="https://countryflagsapi.com/png/BGR" />
+                    <img class="country-image" height="17" src="https://countryflagsapi.com/png/bgr" />
                 
-                    <h3 class="country-name country-1981">
+                    <h3 class="country-name">
                         <span>
-                            BGR
+                            Bulgaria
                         </span>
                     </h3>
                 
@@ -2742,11 +2780,11 @@
             <li class="problem-container">    
                 <h3 class="problem-title problem-title-1981-1"></h3>
                 
-                    <h4 class="problem-links problem-links-1981-1">
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1981-1-p.pdf">Problem</a></span>
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1981-1-s.pdf">Solution</a></span>
-                    </h4>
-                
+            <h4 class="problem-links">
+                <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1981-1-p.pdf">Probleme</a></span>
+                <span class="problem-link-s"><a target="_blank" href="/files/en/ipho/th/1981-1-s.pdf">Soluții</a></span>
+            </h4>
+        
                 <p class="problem-topics problem-topics-1981-1">
                     
                 </p>
@@ -2757,13 +2795,13 @@
             </li>
         
             <li class="year-container year-container-1979">
-                <h1 class="year-title year-title-1979">1979</h1>
+                <h1 class="year-title">1979</h1>
                 
-                    <img class="country-image country-image-1979" height="17" src="https://countryflagsapi.com/png/SSR" />
+                    <img class="country-image" height="17" src="/public/images/c-ssr.png" />
                 
-                    <h3 class="country-name country-1979">
+                    <h3 class="country-name">
                         <span>
-                            SSR
+                            Uniunea Sovietica
                         </span>
                     </h3>
                 
@@ -2776,11 +2814,11 @@
             <li class="problem-container">    
                 <h3 class="problem-title problem-title-1979-1"></h3>
                 
-                    <h4 class="problem-links problem-links-1979-1">
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1979-1-p.pdf">Problem</a></span>
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1979-1-s.pdf">Solution</a></span>
-                    </h4>
-                
+            <h4 class="problem-links">
+                <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1979-1-p.pdf">Probleme</a></span>
+                <span class="problem-link-s"><a target="_blank" href="/files/en/ipho/th/1979-1-s.pdf">Soluții</a></span>
+            </h4>
+        
                 <p class="problem-topics problem-topics-1979-1">
                     
                 </p>
@@ -2791,13 +2829,13 @@
             </li>
         
             <li class="year-container year-container-1977">
-                <h1 class="year-title year-title-1977">1977</h1>
+                <h1 class="year-title">1977</h1>
                 
-                    <img class="country-image country-image-1977" height="17" src="https://countryflagsapi.com/png/CSK" />
+                    <img class="country-image" height="17" src="https://countryflagsapi.com/png/cze" />
                 
-                    <h3 class="country-name country-1977">
+                    <h3 class="country-name">
                         <span>
-                            CSK
+                            Czechoslovakia
                         </span>
                     </h3>
                 
@@ -2810,11 +2848,11 @@
             <li class="problem-container">    
                 <h3 class="problem-title problem-title-1977-1"></h3>
                 
-                    <h4 class="problem-links problem-links-1977-1">
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1977-1-p.pdf">Problem</a></span>
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1977-1-s.pdf">Solution</a></span>
-                    </h4>
-                
+            <h4 class="problem-links">
+                <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1977-1-p.pdf">Probleme</a></span>
+                <span class="problem-link-s"><a target="_blank" href="/files/en/ipho/th/1977-1-s.pdf">Soluții</a></span>
+            </h4>
+        
                 <p class="problem-topics problem-topics-1977-1">
                     
                 </p>
@@ -2825,13 +2863,13 @@
             </li>
         
             <li class="year-container year-container-1976">
-                <h1 class="year-title year-title-1976">1976</h1>
+                <h1 class="year-title">1976</h1>
                 
-                    <img class="country-image country-image-1976" height="17" src="https://countryflagsapi.com/png/HUN" />
+                    <img class="country-image" height="17" src="https://countryflagsapi.com/png/hun" />
                 
-                    <h3 class="country-name country-1976">
+                    <h3 class="country-name">
                         <span>
-                            HUN
+                            Ungaria
                         </span>
                     </h3>
                 
@@ -2844,11 +2882,11 @@
             <li class="problem-container">    
                 <h3 class="problem-title problem-title-1976-1"></h3>
                 
-                    <h4 class="problem-links problem-links-1976-1">
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1976-1-p.pdf">Problem</a></span>
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1976-1-s.pdf">Solution</a></span>
-                    </h4>
-                
+            <h4 class="problem-links">
+                <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1976-1-p.pdf">Probleme</a></span>
+                <span class="problem-link-s"><a target="_blank" href="/files/en/ipho/th/1976-1-s.pdf">Soluții</a></span>
+            </h4>
+        
                 <p class="problem-topics problem-topics-1976-1">
                     
                 </p>
@@ -2859,13 +2897,13 @@
             </li>
         
             <li class="year-container year-container-1975">
-                <h1 class="year-title year-title-1975">1975</h1>
+                <h1 class="year-title">1975</h1>
                 
-                    <img class="country-image country-image-1975" height="17" src="https://countryflagsapi.com/png/EDE" />
+                    <img class="country-image" height="17" src="/public/images/c-ede.png" />
                 
-                    <h3 class="country-name country-1975">
+                    <h3 class="country-name">
                         <span>
-                            EDE
+                            Germania de Est
                         </span>
                     </h3>
                 
@@ -2878,11 +2916,11 @@
             <li class="problem-container">    
                 <h3 class="problem-title problem-title-1975-1"></h3>
                 
-                    <h4 class="problem-links problem-links-1975-1">
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1975-1-p.pdf">Problem</a></span>
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1975-1-s.pdf">Solution</a></span>
-                    </h4>
-                
+            <h4 class="problem-links">
+                <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1975-1-p.pdf">Probleme</a></span>
+                <span class="problem-link-s"><a target="_blank" href="/files/en/ipho/th/1975-1-s.pdf">Soluții</a></span>
+            </h4>
+        
                 <p class="problem-topics problem-topics-1975-1">
                     
                 </p>
@@ -2893,13 +2931,13 @@
             </li>
         
             <li class="year-container year-container-1974">
-                <h1 class="year-title year-title-1974">1974</h1>
+                <h1 class="year-title">1974</h1>
                 
-                    <img class="country-image country-image-1974" height="17" src="https://countryflagsapi.com/png/POL" />
+                    <img class="country-image" height="17" src="https://countryflagsapi.com/png/pol" />
                 
-                    <h3 class="country-name country-1974">
+                    <h3 class="country-name">
                         <span>
-                            POL
+                            Polonia
                         </span>
                     </h3>
                 
@@ -2912,11 +2950,11 @@
             <li class="problem-container">    
                 <h3 class="problem-title problem-title-1974-1"></h3>
                 
-                    <h4 class="problem-links problem-links-1974-1">
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1974-1-p.pdf">Problem</a></span>
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1974-1-s.pdf">Solution</a></span>
-                    </h4>
-                
+            <h4 class="problem-links">
+                <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1974-1-p.pdf">Probleme</a></span>
+                <span class="problem-link-s"><a target="_blank" href="/files/en/ipho/th/1974-1-s.pdf">Soluții</a></span>
+            </h4>
+        
                 <p class="problem-topics problem-topics-1974-1">
                     
                 </p>
@@ -2927,13 +2965,13 @@
             </li>
         
             <li class="year-container year-container-1972">
-                <h1 class="year-title year-title-1972">1972</h1>
+                <h1 class="year-title">1972</h1>
                 
-                    <img class="country-image country-image-1972" height="17" src="https://countryflagsapi.com/png/ROU" />
+                    <img class="country-image" height="17" src="https://countryflagsapi.com/png/rou" />
                 
-                    <h3 class="country-name country-1972">
+                    <h3 class="country-name">
                         <span>
-                            ROU
+                            Romania
                         </span>
                     </h3>
                 
@@ -2946,11 +2984,11 @@
             <li class="problem-container">    
                 <h3 class="problem-title problem-title-1972-1"></h3>
                 
-                    <h4 class="problem-links problem-links-1972-1">
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1972-1-p.pdf">Problem</a></span>
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1972-1-s.pdf">Solution</a></span>
-                    </h4>
-                
+            <h4 class="problem-links">
+                <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1972-1-p.pdf">Probleme</a></span>
+                <span class="problem-link-s"><a target="_blank" href="/files/en/ipho/th/1972-1-s.pdf">Soluții</a></span>
+            </h4>
+        
                 <p class="problem-topics problem-topics-1972-1">
                     
                 </p>
@@ -2961,13 +2999,13 @@
             </li>
         
             <li class="year-container year-container-1971">
-                <h1 class="year-title year-title-1971">1971</h1>
+                <h1 class="year-title">1971</h1>
                 
-                    <img class="country-image country-image-1971" height="17" src="https://countryflagsapi.com/png/BGR" />
+                    <img class="country-image" height="17" src="https://countryflagsapi.com/png/bgr" />
                 
-                    <h3 class="country-name country-1971">
+                    <h3 class="country-name">
                         <span>
-                            BGR
+                            Bulgaria
                         </span>
                     </h3>
                 
@@ -2980,11 +3018,11 @@
             <li class="problem-container">    
                 <h3 class="problem-title problem-title-1971-1"></h3>
                 
-                    <h4 class="problem-links problem-links-1971-1">
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1971-1-p.pdf">Problem</a></span>
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1971-1-s.pdf">Solution</a></span>
-                    </h4>
-                
+            <h4 class="problem-links">
+                <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1971-1-p.pdf">Probleme</a></span>
+                <span class="problem-link-s"><a target="_blank" href="/files/en/ipho/th/1971-1-s.pdf">Soluții</a></span>
+            </h4>
+        
                 <p class="problem-topics problem-topics-1971-1">
                     
                 </p>
@@ -2995,13 +3033,13 @@
             </li>
         
             <li class="year-container year-container-1970">
-                <h1 class="year-title year-title-1970">1970</h1>
+                <h1 class="year-title">1970</h1>
                 
-                    <img class="country-image country-image-1970" height="17" src="https://countryflagsapi.com/png/SSR" />
+                    <img class="country-image" height="17" src="/public/images/c-ssr.png" />
                 
-                    <h3 class="country-name country-1970">
+                    <h3 class="country-name">
                         <span>
-                            SSR
+                            Uniunea Sovietica
                         </span>
                     </h3>
                 
@@ -3014,11 +3052,11 @@
             <li class="problem-container">    
                 <h3 class="problem-title problem-title-1970-1"></h3>
                 
-                    <h4 class="problem-links problem-links-1970-1">
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1970-1-p.pdf">Problem</a></span>
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1970-1-s.pdf">Solution</a></span>
-                    </h4>
-                
+            <h4 class="problem-links">
+                <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1970-1-p.pdf">Probleme</a></span>
+                <span class="problem-link-s"><a target="_blank" href="/files/en/ipho/th/1970-1-s.pdf">Soluții</a></span>
+            </h4>
+        
                 <p class="problem-topics problem-topics-1970-1">
                     
                 </p>
@@ -3029,13 +3067,13 @@
             </li>
         
             <li class="year-container year-container-1969">
-                <h1 class="year-title year-title-1969">1969</h1>
+                <h1 class="year-title">1969</h1>
                 
-                    <img class="country-image country-image-1969" height="17" src="https://countryflagsapi.com/png/CSK" />
+                    <img class="country-image" height="17" src="https://countryflagsapi.com/png/cze" />
                 
-                    <h3 class="country-name country-1969">
+                    <h3 class="country-name">
                         <span>
-                            CSK
+                            Czechoslovakia
                         </span>
                     </h3>
                 
@@ -3048,11 +3086,11 @@
             <li class="problem-container">    
                 <h3 class="problem-title problem-title-1969-1"></h3>
                 
-                    <h4 class="problem-links problem-links-1969-1">
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1969-1-p.pdf">Problem</a></span>
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1969-1-s.pdf">Solution</a></span>
-                    </h4>
-                
+            <h4 class="problem-links">
+                <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1969-1-p.pdf">Probleme</a></span>
+                <span class="problem-link-s"><a target="_blank" href="/files/en/ipho/th/1969-1-s.pdf">Soluții</a></span>
+            </h4>
+        
                 <p class="problem-topics problem-topics-1969-1">
                     
                 </p>
@@ -3063,13 +3101,13 @@
             </li>
         
             <li class="year-container year-container-1968">
-                <h1 class="year-title year-title-1968">1968</h1>
+                <h1 class="year-title">1968</h1>
                 
-                    <img class="country-image country-image-1968" height="17" src="https://countryflagsapi.com/png/HUN" />
+                    <img class="country-image" height="17" src="https://countryflagsapi.com/png/hun" />
                 
-                    <h3 class="country-name country-1968">
+                    <h3 class="country-name">
                         <span>
-                            HUN
+                            Ungaria
                         </span>
                     </h3>
                 
@@ -3082,11 +3120,11 @@
             <li class="problem-container">    
                 <h3 class="problem-title problem-title-1968-1"></h3>
                 
-                    <h4 class="problem-links problem-links-1968-1">
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1968-1-p.pdf">Problem</a></span>
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1968-1-s.pdf">Solution</a></span>
-                    </h4>
-                
+            <h4 class="problem-links">
+                <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1968-1-p.pdf">Probleme</a></span>
+                <span class="problem-link-s"><a target="_blank" href="/files/en/ipho/th/1968-1-s.pdf">Soluții</a></span>
+            </h4>
+        
                 <p class="problem-topics problem-topics-1968-1">
                     
                 </p>
@@ -3097,13 +3135,13 @@
             </li>
         
             <li class="year-container year-container-1967">
-                <h1 class="year-title year-title-1967">1967</h1>
+                <h1 class="year-title">1967</h1>
                 
-                    <img class="country-image country-image-1967" height="17" src="https://countryflagsapi.com/png/POL" />
+                    <img class="country-image" height="17" src="https://countryflagsapi.com/png/pol" />
                 
-                    <h3 class="country-name country-1967">
+                    <h3 class="country-name">
                         <span>
-                            POL
+                            Polonia
                         </span>
                     </h3>
                 
@@ -3116,11 +3154,11 @@
             <li class="problem-container">    
                 <h3 class="problem-title problem-title-1967-1"></h3>
                 
-                    <h4 class="problem-links problem-links-1967-1">
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1967-1-p.pdf">Problem</a></span>
-                        <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1967-1-s.pdf">Solution</a></span>
-                    </h4>
-                
+            <h4 class="problem-links">
+                <span class="problem-link-p"><a target="_blank" href="/files/en/ipho/th/1967-1-p.pdf">Probleme</a></span>
+                <span class="problem-link-s"><a target="_blank" href="/files/en/ipho/th/1967-1-s.pdf">Soluții</a></span>
+            </h4>
+        
                 <p class="problem-topics problem-topics-1967-1">
                     
                 </p>
@@ -3133,5 +3171,6 @@
         </ul>
     
         </div>
+        <script type="text/javascript" src="/public/index.js"></script>
     </body>
 </html>

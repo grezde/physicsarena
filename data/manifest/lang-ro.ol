@@ -11,6 +11,7 @@ problems=Probleme
 solutions=Soluții
 website=Website
 title=Probleme % - fizicarena
+ol-title=Probleme %
 exam-title=Proba %
 group=Grupa %
 

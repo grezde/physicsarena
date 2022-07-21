@@ -35,15 +35,18 @@ const readMyOLE = (pdata) => {
 const mkdir = path => {
     if(!fs.existsSync(path))
         fs.mkdirSync(path, { recursive: true });
-}
-
-const getTitle = pdata => {
-    if(pdata.loc == 'ro')
-        return `Fizicarena - Probleme ${pdata.ol.toUpperCase()}`;
-    return `Physicsarena - ${pdata.ol.toUpperCase()} Problems`;
-}
+};
 
 const getCountryImage = cc => {
+    cc = cc.toLowerCase();
+    const transf = {
+        wde: 'deu',
+        csk: 'cze'
+    };
+    if(['en', 'ede', 'ssr', 'ygs'].includes(cc))
+        return `/public/images/c-${cc}.png`;
+    if(transf[cc])
+        cc = transf[cc];
     return `https://countryflagsapi.com/png/${cc}`;
 };
 
@@ -94,30 +97,36 @@ const getTopicName = (pdata, topic) => {
 const htmlFromPdata = (pdata) => {
     const ole = readMyOLE(pdata);
 
-    const getCorrectFilename = (identifier, echar) => {
-        let l = '';
-        if(fs.existsSync(`../files/${pdata.loc}/${pdata.ol}/${pdata.exam}/${identifier}-${echar}.pdf`))
-            l = `/files/${pdata.loc}/${pdata.ol}/${pdata.exam}/${identifier}-${echar}.pdf`;
-        if(fs.existsSync(`../files/${pdata.loc2}/${pdata.ol}/${pdata.exam}/${identifier}-${echar}.pdf`))
-            l = `/files/${pdata.loc2}/${pdata.ol}/${pdata.exam}/${identifier}-${echar}.pdf`;
-        return l;
-    }
+    const getProblemLinks = (identifier, elem='h3') => {
+        const getfn = (echar) => {
+            let l = '';
+            if(fs.existsSync(`../files/${pdata.loc}/${pdata.ol}/${pdata.exam}/${identifier}-${echar}.pdf`))
+                l = `/files/${pdata.loc}/${pdata.ol}/${pdata.exam}/${identifier}-${echar}.pdf`;
+            if(fs.existsSync(`../files/${pdata.loc2}/${pdata.ol}/${pdata.exam}/${identifier}-${echar}.pdf`))
+                l = `/files/${pdata.loc2}/${pdata.ol}/${pdata.exam}/${identifier}-${echar}.pdf`;
+            return l;
+        };
+        const pl=getfn('p');
+        const sl=getfn('s');
+        if(!pl && !sl)
+            return '';
+        return `
+            <${elem} class="problem-links">
+                <span class="problem-link-p"><a target="_blank" href="${pl}">${pdata.lmap.problems}</a></span>
+                <span class="problem-link-s"><a target="_blank" href="${sl}">${pdata.lmap.solutions}</a></span>
+            </${elem}>
+        `;
+    };
 
     const problemLi = (identifier, pr) => {
-        const pl=getCorrectFilename(identifier, 'p');
-        const sl=getCorrectFilename(identifier, 's');
-        if(pdata.plevel == 0 && !pl && !sl) 
+        const pls = getProblemLinks(identifier, 'h4');
+        if(pdata.plevel == 0 && pls == '') 
             return '';
 
         return `
             <li class="problem-container">    
                 <h3 class="problem-title problem-title-${identifier}">${pr.title}</h3>
-                ${pdata.plevel == 0 ? `
-                    <h4 class="problem-links problem-links-${identifier}">
-                        ${pl ? `<span class="problem-link-p"><a target="_blank" href="${pl}">${pdata.lmap.problem}</a></span>` : ''}
-                        ${sl ? `<span class="problem-link-p"><a target="_blank" href="${sl}">${pdata.lmap.solution}</a></span>` : ''}
-                    </h4>
-                ` : ''}
+                ${pdata.plevel == 0 ? pls : ''}
                 <p class="problem-topics problem-topics-${identifier}">
                     ${pr.topics ? 
                         pr.topics.split(' ').map(t => `
@@ -132,31 +141,19 @@ const htmlFromPdata = (pdata) => {
         `;
     };
 
-    const getProblemsLink = (year) => {
-        if(pdata.level - pdata.hasGrade != 1)
-            return '';
-        const pl=getCorrectFilename(year, 'p');
-        const sl=getCorrectFilename(year, 's');
-        return `
-            <h3 class="problems-links problems-links-${year}">
-                <span class="problems-link-p"><a target="_blank" href="${pl}">${pdata.lmap.problems}</a></span>
-                <span class="problems-link-s"><a target="_blank" href="${sl}">${pdata.lmap.solutions}</a></span>
-            </h3>
-        `;
-    };
 
     let str = `
         <ul class="oly oly-${pdata.ol}">
         ${ole.map(yr => `
             <li class="year-container year-container-${yr.year}">
-                <h1 class="year-title year-title-${yr.year}">${yr.year}</h1>
+                <h1 class="year-title">${yr.year}</h1>
                 ${pdata.cdisp & 1 ? `
-                    <img class="country-image country-image-${yr.year}" height="17" src="${getCountryImage(yr.country)}" />` 
+                    <img class="country-image" height="17" src="${getCountryImage(yr.country)}" />` 
                 : ''}
                 ${pdata.cdisp & 2 ? `
-                    <h3 class="country-name country-${yr.year}">
+                    <h3 class="country-name">
                         <span>
-                            ${pdata.cdisp & 8 ? 
+                            ${pdata.cdisp & 4 ? 
                                 pdata.lmap[`c-${yr.country.toLowerCase()}`] 
                             : yr.country}
                         </span>
@@ -164,26 +161,16 @@ const htmlFromPdata = (pdata) => {
                 ` : ''}
 
                 ${yr.website ? `
-                    <p class="year-website year-website-${yr.year}"><a target="_blank" href="${yr.website}">${pdata.lmap.website}</a></p>` 
+                    <p class="year-website"><a target="_blank" href="${yr.website}">${pdata.lmap.website}</a></p>` 
                 : ''}
-                ${pdata.plevel - pdata.hasGrade == 1 ? `
-                    <h3 class="problems-links problems-links-${yr.year}">
-                        <span class="problems-link-p"><a target="_blank" href="/files/${pdata.loc}/${pdata.ol}/${pdata.exam}/${yr.year}-p.pdf">${pdata.lmap.problems}</a></span>
-                        <span class="problems-link-s"><a target="_blank" href="/files/${pdata.loc}/${pdata.ol}/${pdata.exam}/${yr.year}-s.pdf">${pdata.lmap.solutions}</a></span>
-                    </h3>
-                ` : ''}
+                ${pdata.plevel - pdata.hasGrade == 1 ? getProblemLinks(yr.year) : ''}
 
                 <ul class="problems-container">
                     ${pdata.hasGrade ? 
                         Object.keys(yr.grades).map(grStr => `
                             <uL class="grade-container">
                                 <h2>${pdata.lmap.group.replace('%', grStr)}</h2>
-                                ${pdata.plevel == 1 ? `
-                                    <h3 class="problems-links problems-links-${yr.year}-${grStr.toLowerCase()}">
-                                        <span class="problems-link-p"><a target="_blank" href="/files/${pdata.loc}/${pdata.ol}/${pdata.exam}/${yr.year}-${grStr.toLowerCase()}-p.pdf">${pdata.lmap.problems}</a></span>
-                                        <span class="problems-link-s"><a target="_blank" href="/files/${pdata.loc}/${pdata.ol}/${pdata.exam}/${yr.year}-${grStr.toLowerCase()}-s.pdf">${pdata.lmap.solutions}</a></span>
-                                    </h3>
-                                ` : ''}
+                                ${pdata.plevel == 1 ? getProblemLinks(`${yr.year}-${grStr.toLowerCase()}`) : ''}
                                 ${yr.grades[grStr].problems.map(x => problemLi(`${yr.year}-${grStr.toLowerCase()}-${+x.id+1}`, x)).join('')}
                             </ul>
                         `).join('')
@@ -204,6 +191,12 @@ const writeHTMLFromPdata = (pdata, odata) => {
     const myo = odata.filter(x => x.name == pdata.ol)[0];
     const locales = myo.exams.filter(e => e.code == pdata.exam)[0].locales.split(' ');
     //const exams = [...new Set([].concat(...odata.map(o => o.exams.filter(e => e.locales.includes(pdata.loc)).map(e => e.code))))];
+    const cbinput = (menu, name) => `
+        <input type="checkbox" id="${menu}-${name}" name="${name}" />
+        <label for="${name}">${pdata.lmap[`${menu}-${name}`]}</label>
+        <br />
+    `; 
+    
     str = `
 <!DOCTYPE html>
 <html lang="en">
@@ -220,32 +213,46 @@ const writeHTMLFromPdata = (pdata, odata) => {
             <h1>physicsarena</h1>
             <div class="center"></div>
             <p>${pdata.lmap.language}</p>
-            <p>${pdata.loc}</p>
+            <p>
+                <img class="language-image" height="14" src="${getCountryImage(pdata.loc)}" /> 
+            </p>
             ${locales.filter(l => l != pdata.loc).map(l => `
-            <p><a href="/public/${l}/${pdata.ol}/${pdata.exam}">${l}</a></p>
+                <p><a href="/public/${l}/${pdata.ol}/${pdata.exam}">
+                    <img class="language-image" height="14" src="${getCountryImage(l)}" /> 
+                </a></p>
             `).join('')}
             <p class="separator"></p>
             <p>${pdata.lmap.filter}</p>
-            <p>${pdata.lmap.options}</p>
+            <p><a class="a-button" id="options-button">${pdata.lmap.options}</a></p>
         </nav>
         <nav id="bot">
-            <p>${pdata.lmap.title.replace('%', myo.shortname)}</p>
+            <p>${pdata.lmap['ol-title'].replace('%', myo.shortname)}</p>
             <p>-</p>
             <p>${pdata.lmap['exam-title'].replace('%', pdata.lmap[`e-${pdata.exam}`])}</p>
-            <p class="separator"></p>
-            ${myo.exams.filter(x => x.code != pdata.exam).map(x => `
-            <p><a href="/public/${pdata.loc}/${pdata.ol}/${x.code}">${pdata.lmap[`e-${x.code}`]}</a></p>
-            `)}
-            <p><a href="/public/${pdata.loc}/${pdata.ol}/ex">Practical</a></p>
+            ${myo.exams.length > 1 ? `
+                <p class="separator"></p>
+                ${myo.exams.filter(x => x.code != pdata.exam).map(x => `
+                    <p><a href="/public/${pdata.loc}/${pdata.ol}/${x.code}">${pdata.lmap[`e-${x.code}`]}</a></p>
+                `)}
+            ` : ''}
             <p>${myo.exams.filter(x => x.code != pdata.exam).map(x => x.code)} </p>
             <p class="separator"></p>
             ${odata.filter(o => o.exams.filter(e => e.code == pdata.exam && e.locales.split(' ').includes(pdata.loc)).length > 0 && o.name != pdata.ol).map(o => `
-            <p><a href="/public/${pdata.loc}/${o.name}/${pdata.exam}">${o.shortname}</a></p>
+                <p><a href="/public/${pdata.loc}/${o.name}/${pdata.exam}">${o.shortname}</a></p>
             `).join('')}
         </nav>
+        <div class="component" id="options-component">
+            <h3>Options</h3>
+            <form id="options-form">
+                ${['flags', 'cname', 'website', 'topics', 'desc', 'name', 'dark'].map(x => cbinput('options', x)).join('')}
+                <input type="Submit" class="submit-button" value="${pdata.lmap.submit}" />
+                <input type="Submit" class="hide-button" value="${pdata.lmap.hide}" />
+            </form>
+        </div>
         <div id="container">
             ${str}
         </div>
+        <script type="text/javascript" src="/public/index.js"></script>
     </body>
 </html>
 `;

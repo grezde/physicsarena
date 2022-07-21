@@ -25,6 +25,10 @@ a:active, a:hover {
     border: 2px solid black;
     border-radius: 3px;
 }
+.language-image {
+    border: 1px solid black;
+    border-radius: 3px;
+}
 
 .year-title, .country-image, .country-name, .year-website {
     display: inline-block;
@@ -82,10 +86,10 @@ a:active, a:hover {
     font-size: 0.92rem;
 }
 
-.problem-links, .problems-links {
+.problem-links {
     margin-bottom: 3px;
 }
-.problem-link-p, .problem-link-s, .problems-link-p, .problems-link-s {
+.problem-link-p, .problem-link-s {
     margin-right: 10px;
     margin-bottom: 4px;
     display: inline-block;
@@ -120,7 +124,7 @@ a:active, a:hover {
     color: white;
 }
 
-nav {
+nav, .component {
     background-color:rgb(213, 218, 236);
     border-bottom: 1px solid rgb(113, 113, 113);
     padding: 5px 20px 8px 20px;
@@ -171,4 +175,26 @@ nav .separator {
 
 #bot p {
     margin: 0 1.5px;
+}
+
+.hidden {
+    display: none;
+}
+
+.a-button {
+    cursor: pointer;
+}
+
+.component h3 {
+    margin-top: 3px;
+    margin-bottom: 5px;
+}
+
+.component input {
+    margin-bottom: 5px;
+}
+
+.component input[type=submit] {
+    margin-top: 5px;
+    padding: 5px 10px;
 }
