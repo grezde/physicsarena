@@ -109,6 +109,22 @@ const combineOLE = (oleA, oleB, ex) => {
     return oleC;
 };
 
+const subcatOLE = (ole, ex) => {
+    if(!ex.subcatFlag)
+        return ole;
+    let ole2 = ole.filter(x => x[ex.globalFlag].split('.').length == 1).map(x => ({ ...x, [ex.subcatFlag]: {} }));
+    for(let x of ole) {
+        let ar = x[ex.globalFlag].split('.');
+        if(ar.length == 1)
+            continue;
+        let mother = ole2.filter(x => x[ex.globalFlag] == ar[0])[0];
+        if(!mother)
+            throw `Subcategory mother in ${x[ex.globalFlag]} does not exist`;
+        mother[ex.subcatFlag][ar[1]] = x;
+    }
+    return ole2;
+};
+
 module.exports = {
-    readOL, readOLE, combineOLE, readFile
+    readOL, readOLE, combineOLE, readFile, subcatOLE
 };

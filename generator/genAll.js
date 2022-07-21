@@ -7,7 +7,8 @@ const ms = readOLE('manifest', 'manifest', {
     globalOptions: {
         'd': 'shortname',
         'p': 'plevel',
-        'g': 'hasGrade'
+        'g': 'hasGrade',
+        'c': 'cdisp'
     },
     iterFlag: 'exams',
     iterOptions: {
@@ -25,8 +26,10 @@ for(let ol of ms)
                 ol: ol.name,
                 exam: ex.code,
                 loc: loc,
+                loc2: ex.locales.split(' ')[0],
                 hasGrade: !!+ol.hasGrade,
-                plevel: +ol.plevel
+                plevel: +ol.plevel,
+                cdisp: +ol.cdisp
             });
         }
 for(let l in locales) {
@@ -42,7 +45,9 @@ for(let l in locales) {
 }
 pdatas = pdatas.map(p => ({ ...p, lmap: locales[p.loc] }));
 
-for(let p of pdatas)
+for(let p of pdatas) {
     writeHTMLFromPdata(p, ms);
+    console.log(`Written ${p.loc}/${p.ol}/${p.exam}`);
+}
     
 console.log("Written all files");
