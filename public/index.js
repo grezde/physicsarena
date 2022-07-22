@@ -3,6 +3,7 @@ window.onload = e => {
 
     const hideItem = (className, lsName) => {
         if(!!localStorage.getItem(lsName)) {
+            document.getElementById(lsName).checked = true;
             let es = document.getElementsByClassName(className);
             for(let i=0; i<es.length; i++)
                 es[i].classList.add('hidden');

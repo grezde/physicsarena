@@ -13,6 +13,8 @@ website=Website
 title=% Problems - physicsarena
 oth-title=Other Problems
 group=% Group
+submit=Save
+hide=Back
 
 i-title=List of Problems from %, % round
 i-website=Official olympiad website
@@ -83,3 +85,11 @@ c-hkg=Hong Kong
 c-mng=Mongolia
 c-www=Online
 c-lva=Latvia
+
+options-flags=Hide country flags
+options-cname=Hide country names
+options-website=Hide olympiad websites
+options-topics=Hide problem topics
+options-desc=Hide problem descriptions
+options-name=Hide problem names
+options-dark=Activate dark theme

@@ -1,6 +1,3 @@
-meta:
-	-t International Physics Olympiad
-
 2019:
 	-n Springs and Slinky
 	-d How a slinky falls - very nice physics!
@@ -216,10 +213,10 @@ meta:
 	-n Masses and Springs
 
 1985:
-	-n 
-	-n 
+	-n Antenna Array
+	-n Hall Effect
 	-d [object Object]
-	-n 
+	-n Escaping the Solar System
 	-d [object Object]
 
 1984:
@@ -230,73 +227,80 @@ meta:
 	-n Electrical Filter
 
 1983:
-	-n 
+	-n Jumping Particle
 	-n AC Circuit
-	-n 
+	-n Prisms
+	-n Compton Scattering
+	-n IPhO's Logo
 
 1982:
 	-n Fluorescent Lamp
-	-n Physical Pendulum
+	-n Oscillating coat hanger
 	-d [object Object]
-	-n Air Balloon
+	-n Hot-air Balloon
 
 1981:
-	-n 
-	-n 
-	-n 
+	-n Gas Container Rocket
+	-n Electric Lamp
+	-n Detecting Astronomical Radiowaves
 
 1979:
-	-n 
-	-n 
-	-n 
+	-n To The Moon!
+	-n Influence of Humidity on Scales
+	-n Reflectors on the Moon
 
 1977:
-	-n 
-	-n 
-	-n 
+	-n Otto Cycle
+	-n Rectangular Soap Film
+	-n Electron Gun
 
 1976:
-	-n 
-	-n 
-	-n 
+	-n Spinning Block Inside a Sphere
+	-n A Valve in a Cylinder
+	-n Air Bubble Inside a Glass Sphere
 
 1975:
-	-n 
-	-n 
-	-n 
+	-n Rotating Rod
+	-n Thick Lens
+	-n Ions in a Magnetic Field
 
 1974:
-	-n 
-	-n 
-	-n 
+	-n Hydrogen Atoms Colliding
+	-n Bending Light
+	-n Surviving with Thermodynamics
 
 1972:
-	-n 
-	-n 
-	-n 
+	-n Three Cylinders
+	-n Molecular Physics
+	-n Dielectric Liquid
+	-n Geometrical Optics and Interference
 
 1971:
-	-n 
-	-n 
-	-n 
+	-n Connected Masses on a Prism
+	-n Mercury Barometer
+	-n Batteries, Capacitors and Resistors in a Cube
+	-n Spherical Aquarium
 
 1970:
-	-n 
-	-n 
-	-n 
+	-n Carrying a Bar
+	-n A Chemistry Problem (Salt Crystals)
+	-n Spherical Capacitors
+	-n A Telescope with a Spherical Mirror
 
 1969:
-	-n 
-	-n 
-	-n 
+	-n Three Carts
+	-n Water inside a Copper Calorimeter
+	-n Suspended Charged Ball
+	-n Glass Plate above a Glass Cube
 
 1968:
-	-n 
-	-n 
-	-n 
+	-n Block and Cylinder on an Inclined Plane
+	-n Mixing Toluene
+	-n Glass Semi-cylinder
 
 1967:
-	-n 
-	-n 
-	-n 
+	-n Shooting a Ball
+	-n Infinite Network of Resistors
+	-n Heating a Ball
+	-n Heating a Vessel
 

@@ -27,17 +27,13 @@ const readMyOLE = (pdata) => {
     };
     let a = readOLE(pdata.ol, pdata.exam, extractOptions);
     let b = readOLE(pdata.ol, `${pdata.exam}-${pdata.loc}`, extractOptions);
-    let c = combineOLE(a, b, extractOptions);
-    let d = subcatOLE(c, extractOptions);
-    // POST PROCESSING
-    if(pdata.ol == 'rmph') {
-        for(let yr of d)
-            yr.country = 'Romania';
-    }
-    if(pdata.hasGrade) {
-        // TODO 
-    }
-    return d;
+    let c = readOLE(pdata.ol, 'sh', extractOptions);
+    let d = readOLE(pdata.ol, `sh-${pdata.loc}`, extractOptions);
+    let e = combineOLE(a, b, extractOptions);
+    let f = combineOLE(c, d, extractOptions);
+    let g = combineOLE(e, f, extractOptions);
+    let h = subcatOLE(g, extractOptions);
+    return h;
 };
 
 const mkdir = path => {
@@ -109,9 +105,9 @@ const htmlFromPdata = (pdata) => {
         const getfn = (echar) => {
             let l = '';
             if(fs.existsSync(`../files/${pdata.loc}/${pdata.ol}/${pdata.exam}/${identifier}-${echar}.pdf`))
-                l = `/files/${pdata.loc}/${pdata.ol}/${pdata.exam}/${identifier}-${echar}.pdf`;
+                l = `${pdata.fileStart}${pdata.loc}/${pdata.ol}/${pdata.exam}/${identifier}-${echar}.pdf`;
             if(fs.existsSync(`../files/${pdata.loc2}/${pdata.ol}/${pdata.exam}/${identifier}-${echar}.pdf`))
-                l = `/files/${pdata.loc2}/${pdata.ol}/${pdata.exam}/${identifier}-${echar}.pdf`;
+                l = `${pdata.fileStart}${pdata.loc2}/${pdata.ol}/${pdata.exam}/${identifier}-${echar}.pdf`;
             return l;
         };
         const pl=getfn('p');
@@ -149,14 +145,13 @@ const htmlFromPdata = (pdata) => {
         `;
     };
 
-
     let str = `
         <ul class="oly oly-${pdata.ol}">
         ${ole.map(yr => `
             <li class="year-container year-container-${yr.year}">
                 <h1 class="year-title">${yr.year}</h1>
                 ${pdata.cdisp & 1 ? `
-                    <img class="country-image" height="17" src="${getCountryImage(yr.country)}" />` 
+                    <img class="country-image" height="17" src="${console.log(yr), getCountryImage(yr.country)}" />` 
                 : ''}
                 ${pdata.cdisp & 2 ? `
                     <h3 class="country-name">
@@ -212,24 +207,26 @@ const writeHTMLFromPdata = (pdata, odata) => {
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>${pdata.lmap.title.replace('%', myo.shortname)}</title>
-        <link rel="stylesheet" href="/public/main.css" />
+        <link rel="stylesheet" href="${pdata.redirectStart}main.css" />
         <!-- This page was generated from raw olympiad data -->
     </head>
     <body>
         <nav id="top">
-            <h1>physicsarena</h1>
+            <h1>${pdata.lmap.physicsarena}</h1>
             <div class="center"></div>
-            <p>${pdata.lmap.language}</p>
-            <p>
-                <img class="language-image" height="14" src="${getCountryImage(pdata.loc)}" /> 
-            </p>
-            ${locales.filter(l => l != pdata.loc).map(l => `
-                <p><a href="/public/${l}/${pdata.ol}/${pdata.exam}">
-                    <img class="language-image" height="14" src="${getCountryImage(l)}" /> 
-                </a></p>
-            `).join('')}
-            <p class="separator"></p>
-            <p>${pdata.lmap.filter}</p>
+            ${locales.length >= 2 ? `
+                <p>${pdata.lmap.language}</p>
+                <p>
+                    <img class="language-image" height="14" src="${getCountryImage(pdata.loc)}" /> 
+                </p>
+                ${locales.filter(l => l != pdata.loc).map(l => `
+                    <p><a href="${pdata.redirectStart}${l}/${pdata.ol}/${pdata.exam}">
+                        <img class="language-image" height="14" src="${getCountryImage(l)}" /> 
+                    </a></p>
+                `).join('')}
+                <p class="separator"></p>    
+            ` : ''}
+            <!--<p>${pdata.lmap.filter}</p>-->
             <p><a class="a-button" id="options-button">${pdata.lmap.options}</a></p>
         </nav>
         <nav id="bot">
@@ -238,17 +235,17 @@ const writeHTMLFromPdata = (pdata, odata) => {
             ${myo.exams.length > 1 ? `
                 <p class="separator"></p>
                 ${myo.exams.filter(x => x.code != pdata.exam).map(x => `
-                    <p><a class="a-button" href="/public/${pdata.loc}/${pdata.ol}/${x.code}">${pdata.lmap[`e-${x.code}`]}</a></p>
+                    <p><a class="a-button" href="${pdata.redirectStart}${pdata.loc}/${pdata.ol}/${x.code}">${pdata.lmap[`e-${x.code}`]}</a></p>
                 `)}
             ` : ''}
-            <p>${myo.exams.filter(x => x.code != pdata.exam).map(x => x.code)} </p>
+            <!--<p>${myo.exams.filter(x => x.code != pdata.exam).map(x => x.code)} </p>-->
             <p class="separator"></p>
             ${odata.filter(o => o.exams.filter(e => e.code == pdata.exam && e.locales.split(' ').includes(pdata.loc)).length > 0 && o.name != pdata.ol).map(o => `
-                <p><a class="a-button" href="/public/${pdata.loc}/${o.name}/${pdata.exam}">${o.shortname}</a></p>
+                <p><a class="a-button" href="${pdata.redirectStart}${pdata.loc}/${o.name}/${pdata.exam}">${o.shortname}</a></p>
             `).join('')}
         </nav>
         <div class="component hidden" id="options-component">
-            <h3>Options</h3>
+            <h3>${pdata.lmap.options}</h3>
             <form id="options-form">
                 ${['flags', 'cname', 'website', 'topics', 'desc', 'name', 'dark'].map(x => cbinput('options', x)).join('')}
                 <input type="Submit" class="submit-button" value="${pdata.lmap.submit}" />
@@ -274,7 +271,7 @@ const writeHTMLFromPdata = (pdata, odata) => {
             </div>
             ${str}
         </div>
-        <script type="text/javascript" src="/public/index.js"></script>
+        <script type="text/javascript" src="${pdata.redirectStart}index.js"></script>
     </body>
 </html>
 `;

@@ -1,8 +1,3 @@
-meta:
-	-t Olimpiada Internationala de Fizica
-	-r Site-ul neoficial IPhO
-	+  Site-ul sefului de comisie, Jaan Kalda
-
 2019:
 	-n Springs and Slinky
 	-d How a slinky falls - very nice physics!

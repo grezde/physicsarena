@@ -1,5 +1,5 @@
 
-# Diacritice (ăâîșț)
+# Diacritice (ăâîșț ĂÂÎȘȚ)
 
 filter=Filtre
 options=Opțiuni
@@ -7,9 +7,12 @@ physicsarena=fizicarena
 language=Limbă
 problem=Enunț
 solution=Soluție
-problems=Probleme
+problems=Enunțuri
 solutions=Soluții
-website=Website
+website=Site
+submit=Salvează
+hide=Înapoi
+
 title=Probleme % - fizicarena
 oth-title=Alte probleme
 group=Grupa %
@@ -76,10 +79,18 @@ c-rou=Romania
 c-wde=Germania de Vest
 c-bgr=Bulgaria
 c-ssr=Uniunea Sovietica
-c-csk=Czechoslovakia
+c-csk=Cehoslovacia
 c-hun=Ungaria
 c-rus=Rusia
 c-hkg=Hong Kong
 c-mng=Mongolia
 c-www=Online
 c-lva=Letonia
+
+options-flags=Ascude steaguri
+options-cname=Ascude țara organizatoare
+options-website=Ascude site-ul olimpiadei
+options-topics=Ascude domeniile problemelor
+options-desc=Ascude descrierile de probleme
+options-name=Ascude numele problemelor
+options-dark=Activează tema întunecată

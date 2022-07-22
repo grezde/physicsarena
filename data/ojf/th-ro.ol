@@ -1,3 +1,6 @@
+meta:
+	-t Olimpiada Județeană de Fizică
+
 2020.IX:
 	-n Problema 1
 	-n Problema 2

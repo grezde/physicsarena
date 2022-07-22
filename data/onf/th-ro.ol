@@ -1,3 +1,6 @@
+meta:
+	-t Olimpiada Națională de Fizică
+
 2019.IX:
 	-n Experimente cu ciocniri
 	-n Elasticitate si echilibru

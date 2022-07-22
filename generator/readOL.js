@@ -25,9 +25,17 @@ const deepCopy = obj => {
 const readFile = (folder, filename) => fs.readFileSync(`../data/${folder}/${filename}.ol`).toString().split('\n').map(rmWhitespace).join('\n');
 
 const readOL = (folder, filename) => {
-    let lns = readFile(folder, filename).split('\n');
+    let lns;
+    try {
+        lns = readFile(folder, filename).split('\n');
+    }
+    catch(e) {
+        return [];
+    }
     let objs = [];
     for(let ln of lns) {
+        if(ln[0] == '#')
+            continue;
         if(ln[0] == '-') {
             let c = ln[1], d = ln.substring(3);
             objs[objs.length-1][1].push([c, d]);

@@ -2,10 +2,12 @@
 ipho:
     -d IPhO
     -p 0
-    -e th
     -g 0
     -c 0b111
+    -e th
     -l en ro
+    -e ex
+    -l en
 
 apho:
     -d APhO
@@ -29,7 +31,7 @@ rmph:
     -e th
     -g 0
     -c 0b000
-    -l en
+    -l en ro
 
 onf:
     -d ONF

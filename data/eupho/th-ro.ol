@@ -1,8 +1,3 @@
-2021:
-	-n A leak
-	-n Thread around a cylinder
-	-n Glass ball
-
 2020:
 	-n Solenoid and loop
 	-n Mechanical accelerator
