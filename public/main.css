@@ -58,12 +58,6 @@ a:active, a:hover {
     display: flex;
     flex-wrap: wrap;
     align-content: center;
-    justify-content: space-around;
-}
-
-.problems-container {
-    padding-left: 30px;
-    width: 350px;
 }
 
 .problem-title {
@@ -197,4 +191,75 @@ nav .separator {
 .component input[type=submit] {
     margin-top: 5px;
     padding: 5px 10px;
+}
+
+#intro {
+    margin-bottom: 30px;
+}
+#intro ul {
+    padding-left: 20px;
+}
+#intro h2, #intro h4 {
+    margin-bottom: 5px;
+}
+
+@media(max-width: 500px) {
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .language-image {
+        height: 18px;
+        margin-left: 5px;
+    }
+
+    nav .a-button {
+        padding: 10px 5px;
+        margin: 10px 5px;
+    }
+
+    #intro h4, #intro li, .problem-links * {
+        padding-top: 8px;
+        padding-bottom: 8px;
+        margin-right: 15px;
+    } 
+
+    nav .center {
+        width: 90%;
+        height: 6px;
+    }
+
+    nav .separator {
+        width: 90%;
+        background-color: transparent;
+        height: 8px;
+    }
+
+}
+
+@media(min-width: 350px) {
+
+    .oly {
+        justify-content: space-around;
+    }
+    
+
+    .problems-container {
+        padding-left: 25px;
+        padding-right: 25px;
+        width: 250px;
+    }
+}
+
+@media(min-width: 500px) {
+
+    .problems-container {
+        padding-left: 30px;
+        padding-right: 30px;
+        width: 350px;
+    }
+
 }

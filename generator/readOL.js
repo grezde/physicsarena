@@ -32,11 +32,12 @@ const readOL = (folder, filename) => {
             let c = ln[1], d = ln.substring(3);
             objs[objs.length-1][1].push([c, d]);
         }
-        if(ln[0] == '+') {
+        else if(ln[0] == '+') {
             let d = ln.substring(3);
-            objs[objs.length-1][1][1] += d;
+            let a = objs[objs.length-1][1];
+            a[a.length-1][1] += '\n'+d;
         }
-        if(ln[ln.length-1] == ':')
+        else if(ln[ln.length-1] == ':')
             objs.push([ln.substring(0, ln.length-1), []]);
     }
     return objs;
@@ -44,6 +45,9 @@ const readOL = (folder, filename) => {
 
 const readOLE = (folder, filename, extr) => {
     let objs = readOL(folder, filename);
+    let metao = objs.filter(x => x[0] == 'meta')[0];
+    if(metao)
+        objs = objs.filter(x => x[0] != 'meta');
     objs = objs.map(x => ({
         [extr.globalFlag]: x[0],
         [extr.iterFlag]: [],
@@ -64,12 +68,18 @@ const readOLE = (folder, filename, extr) => {
         }
         delete x.params;
     }
-    //objs = objs.sort((x, y) => x[extr.globalFlag] == y[extr.globalFlag] ? 0 : x[extr.globalFlag] > y[extr.globalFlag] ? -1 : 1);
+    objs.metadata = {};
+    if(metao) {
+        for(let p of metao[1])
+            if(extr.metaOptions[p[0]])
+                objs.metadata[extr.metaOptions[p[0]]] = p[1];
+    }
     return objs;
 };
 
 const combineOLE = (oleA, oleB, ex) => {
     let oleC = [];
+    const bmet = oleB.metadata;
     for(let e of oleA) {
         // get element out of second object
         let e2 = oleB.filter(x => x[ex.globalFlag] == e[ex.globalFlag]);
@@ -106,6 +116,7 @@ const combineOLE = (oleA, oleB, ex) => {
         oleC.push(e);
     }
     oleC.push(...oleB);
+    oleC.metadata = { ...oleA.metadata, ...bmet };
     return oleC;
 };
 
@@ -113,6 +124,7 @@ const subcatOLE = (ole, ex) => {
     if(!ex.subcatFlag)
         return ole;
     let ole2 = ole.filter(x => x[ex.globalFlag].split('.').length == 1).map(x => ({ ...x, [ex.subcatFlag]: {} }));
+    ole2.metadata = ole.metadata;
     for(let x of ole) {
         let ar = x[ex.globalFlag].split('.');
         if(ar.length == 1)

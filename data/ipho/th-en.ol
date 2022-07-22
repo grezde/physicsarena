@@ -1,3 +1,6 @@
+meta:
+	-t International Physics Olympiad
+
 2019:
 	-n Springs and Slinky
 	-d How a slinky falls - very nice physics!

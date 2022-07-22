@@ -1,3 +1,8 @@
+meta:
+	-l https://ipho-unofficial.org/
+	+  https://www.ioc.ee/~kalda/ipho/
+	-w https://www.ipho-new.org/
+
 2019:
 	-c ISR
 	-w https://www.ipho2019.org.il

@@ -4,6 +4,14 @@ const fs = require('fs');
 
 const readMyOLE = (pdata) => {
     const extractOptions = {
+        metaOptions: {
+            'w': 'website',
+            'c': 'country',
+            's': 'source',
+            'l': 'links',
+            't': 'translit',
+            'r': 'tlinks'
+        },
         globalFlag: 'year',
         globalOptions: {
             'c': 'country',
@@ -43,7 +51,7 @@ const getCountryImage = cc => {
         wde: 'deu',
         csk: 'cze'
     };
-    if(['en', 'ede', 'ssr', 'ygs'].includes(cc))
+    if(['en', 'ede', 'ssr', 'ygs', 'www'].includes(cc))
         return `/public/images/c-${cc}.png`;
     if(transf[cc])
         cc = transf[cc];
@@ -182,12 +190,11 @@ const htmlFromPdata = (pdata) => {
     `;
 
     return str;
-
-    
 };
 
 const writeHTMLFromPdata = (pdata, odata) => {
     let str = htmlFromPdata(pdata);
+    const ole = readMyOLE(pdata);
     const myo = odata.filter(x => x.name == pdata.ol)[0];
     const locales = myo.exams.filter(e => e.code == pdata.exam)[0].locales.split(' ');
     //const exams = [...new Set([].concat(...odata.map(o => o.exams.filter(e => e.locales.includes(pdata.loc)).map(e => e.code))))];
@@ -226,22 +233,21 @@ const writeHTMLFromPdata = (pdata, odata) => {
             <p><a class="a-button" id="options-button">${pdata.lmap.options}</a></p>
         </nav>
         <nav id="bot">
-            <p>${pdata.lmap['ol-title'].replace('%', myo.shortname)}</p>
-            <p>-</p>
-            <p>${pdata.lmap['exam-title'].replace('%', pdata.lmap[`e-${pdata.exam}`])}</p>
+            <p>${pdata.lmap['oth-title']}</p>
+            
             ${myo.exams.length > 1 ? `
                 <p class="separator"></p>
                 ${myo.exams.filter(x => x.code != pdata.exam).map(x => `
-                    <p><a href="/public/${pdata.loc}/${pdata.ol}/${x.code}">${pdata.lmap[`e-${x.code}`]}</a></p>
+                    <p><a class="a-button" href="/public/${pdata.loc}/${pdata.ol}/${x.code}">${pdata.lmap[`e-${x.code}`]}</a></p>
                 `)}
             ` : ''}
             <p>${myo.exams.filter(x => x.code != pdata.exam).map(x => x.code)} </p>
             <p class="separator"></p>
             ${odata.filter(o => o.exams.filter(e => e.code == pdata.exam && e.locales.split(' ').includes(pdata.loc)).length > 0 && o.name != pdata.ol).map(o => `
-                <p><a href="/public/${pdata.loc}/${o.name}/${pdata.exam}">${o.shortname}</a></p>
+                <p><a class="a-button" href="/public/${pdata.loc}/${o.name}/${pdata.exam}">${o.shortname}</a></p>
             `).join('')}
         </nav>
-        <div class="component" id="options-component">
+        <div class="component hidden" id="options-component">
             <h3>Options</h3>
             <form id="options-form">
                 ${['flags', 'cname', 'website', 'topics', 'desc', 'name', 'dark'].map(x => cbinput('options', x)).join('')}
@@ -250,6 +256,22 @@ const writeHTMLFromPdata = (pdata, odata) => {
             </form>
         </div>
         <div id="container">
+            <div id="intro">
+                <h2>${pdata.lmap['i-title'].replace('%', ole.metadata.translit || myo.shortname).replace('%', pdata.lmap[`e-${pdata.exam}`].toLowerCase())}</h2>
+                ${ole.metadata.website ? `
+                    <h4><a target="_blank" href="${ole.metadata.website}">${pdata.lmap['i-website']}</a></h4>
+                ` : ''}
+                ${ole.metadata.links ? `
+                    <p>${pdata.lmap['i-resources']}</p>
+                    <ul>
+                        ${ole.metadata.links.split('\n').map((l, i) => `
+                            <li>
+                                <a href="${l}" target="_blank">${ole.metadata.tlinks ? (ole.metadata.tlinks.split('\n')[i] || l) : l}</a>
+                            </li>
+                        `).join('')}
+                    </ul>
+                ` : ''}
+            </div>
             ${str}
         </div>
         <script type="text/javascript" src="/public/index.js"></script>

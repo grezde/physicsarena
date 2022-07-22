@@ -11,9 +11,12 @@ problems=Probleme
 solutions=Soluții
 website=Website
 title=Probleme % - fizicarena
-ol-title=Probleme %
-exam-title=Proba %
+oth-title=Alte probleme
 group=Grupa %
+
+i-title=Lista de probleme de la %, proba %
+i-website=Website-ul oficial al olimpiadei
+i-resources=Alte resurse:
 
 e-th=Teoretică
 e-ex=Practică
