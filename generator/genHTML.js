@@ -103,12 +103,11 @@ const htmlFromPdata = (pdata) => {
 
     const getProblemLinks = (identifier, elem='h3', plural=false) => {
         const getfn = (echar) => {
-            let l = '';
             if(fs.existsSync(`../files/${pdata.loc}/${pdata.ol}/${pdata.exam}/${identifier}-${echar}.pdf`))
-                l = `${pdata.fileStart}${pdata.loc}/${pdata.ol}/${pdata.exam}/${identifier}-${echar}.pdf`;
+                return `${pdata.fileStart}${pdata.loc}/${pdata.ol}/${pdata.exam}/${identifier}-${echar}.pdf`;
             if(fs.existsSync(`../files/${pdata.loc2}/${pdata.ol}/${pdata.exam}/${identifier}-${echar}.pdf`))
-                l = `${pdata.fileStart}${pdata.loc2}/${pdata.ol}/${pdata.exam}/${identifier}-${echar}.pdf`;
-            return l;
+                return `${pdata.fileStart}${pdata.loc2}/${pdata.ol}/${pdata.exam}/${identifier}-${echar}.pdf`;
+            return '';
         };
         const pl=getfn('p');
         const sl=getfn('s');
@@ -116,8 +115,8 @@ const htmlFromPdata = (pdata) => {
             return '';
         return `
             <${elem} class="problem-links">
-                <span class="problem-link-p"><a target="_blank" href="${pl}">${plural ? pdata.lmap.problems : pdata.lmap.problem}</a></span>
-                <span class="problem-link-s"><a target="_blank" href="${sl}">${plural ? pdata.lmap.solutions : pdata.lmap.solution}</a></span>
+                ${pl ? `<span class="problem-link-p"><a target="_blank" href="${pl}">${plural ? pdata.lmap.problems  : pdata.lmap.problem }</a></span>` : ''}
+                ${sl ? `<span class="problem-link-s"><a target="_blank" href="${sl}">${plural ? pdata.lmap.solutions : pdata.lmap.solution}</a></span>` : ''}
             </${elem}>
         `;
     };
@@ -149,7 +148,7 @@ const htmlFromPdata = (pdata) => {
         <ul class="oly oly-${pdata.ol}">
         ${ole.map(yr => `
             <li class="year-container year-container-${yr.year}">
-                <h1 class="year-title">${yr.year}</h1>
+                <h1 class="year-title">${yr.year.split('-').map(x => pdata.lmap[x] || x).join(' ')}</h1>
                 ${pdata.cdisp & 1 ? `
                     <img class="country-image" height="17" src="${getCountryImage(yr.country, pdata)}" />` 
                 : ''}
@@ -258,6 +257,9 @@ const writeHTMLFromPdata = (pdata, odata) => {
                 <h2>${pdata.lmap['i-title'].replace('%', ole.metadata.translit || myo.shortname).replace('%', pdata.lmap[`e-${pdata.exam}`].toLowerCase())}</h2>
                 ${ole.metadata.website ? `
                     <h4><a target="_blank" href="${ole.metadata.website}">${pdata.lmap['i-website']}</a></h4>
+                ` : ''}
+                ${ole.metadata.country ? `
+                    <p>${pdata.lmap['organized-by'].replace('%', ole.metadata.country)}</p>
                 ` : ''}
                 ${ole.metadata.links ? `
                     <p>${pdata.lmap['i-resources']}</p>

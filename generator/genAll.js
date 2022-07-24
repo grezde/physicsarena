@@ -45,7 +45,7 @@ for(let ol of ms)
         }
 for(let l in locales) {
     locales[l] = {};
-    const lines = readFile('manifest', `lang-${l}`).split('\n');
+    const lines = readFile('manifest', `lang-${l}.txt`).split('\n');
     for(let line of lines) {
         if(line[0] == '#')
             continue;

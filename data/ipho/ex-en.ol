@@ -6,9 +6,9 @@
 #2020:
 #	-n Crystallography
 	
-#2019:
-#	-n Optical Measurements
-#    -n Wiedemann-Franz Law
+2019:
+	-n Optical Measurements
+    -n Wiedemann-Franz Law
 	
 2018:
 	-n Paper Transistor

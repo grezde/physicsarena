@@ -1,7 +1,10 @@
 /archive
 /files
-util.sh
+scripts/util.sh
 /files_old
 /build
 /temp
 /public
+# !/public/index.js
+# !/public/images
+# !/public/main.css

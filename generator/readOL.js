@@ -22,12 +22,12 @@ const deepCopy = obj => {
             newobj[prop] = obj[prop];
     return newobj;
 };
-const readFile = (folder, filename) => fs.readFileSync(`../data/${folder}/${filename}.ol`).toString().split('\n').map(rmWhitespace).join('\n');
+const readFile = (folder, filename) => fs.readFileSync(`../data/${folder}/${filename}`).toString().split('\n').map(rmWhitespace).join('\n');
 
 const readOL = (folder, filename) => {
     let lns;
     try {
-        lns = readFile(folder, filename).split('\n');
+        lns = readFile(folder, filename + '.ol').split('\n');
     }
     catch(e) {
         return [];

@@ -16,6 +16,8 @@ apho:
     -g 0
     -c 0b111
     -l en
+    -e ex
+    -l en
 
 eupho:
     -d EuPhO
@@ -56,4 +58,30 @@ baraj:
     -c 0b010
     -e th
     -l ro
+
+efizica:
+    -d eFizică
+    -p 1
+    -g 0
+    -c 0b000
+    -e th
+    -l ro
+
+nbpho:
+    -d NBPhO
+    -p 1
+    -g 0
+    -c 0b000
+    -e th
+    -l en
+
+izho:
+    -d IZhO
+    -p 1
+    -g 0
+    -c 0b000
+    -e th
+    -l en
+    -e ex
+    -l en
 
