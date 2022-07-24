@@ -4,7 +4,7 @@ scripts/util.sh
 /files_old
 /build
 /temp
-# /public
-# !/public/index.js
-# !/public/images
-# !/public/main.css
+/public
+!/public/index.js
+!/public/images
+!/public/main.css
