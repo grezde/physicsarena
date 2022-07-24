@@ -195,8 +195,8 @@
 
 1988:
 	-c AUT
-	-t 
-	-t 
+	-t nuc rel
+	-t mech
 	-t nuc rel
 
 1987:
@@ -208,14 +208,14 @@
 1986:
 	-c GBR
 	-t opt
-	-t 
+	-t waves
 	-t mech osc
 
 1985:
 	-c YGS
-	-t 
-	-t 
-	-t 
+	-t waves
+	-t elec osc
+	-t grav
 
 1984:
 	-c SWE
@@ -225,85 +225,92 @@
 
 1983:
 	-c ROU
-	-t 
-	-t 
-	-t 
+	-t mech
+	-t circ
+	-t opt
+	-t nuc
+	-t fluid
 
 1982:
 	-c WDE
-	-t 
-	-t 
-	-t 
+	-t circ
+	-t mech
+	-t thermo
 
 1981:
 	-c BGR
-	-t 
-	-t 
-	-t 
+	-t mech thermo
+	-t circ
+	-t waves
 
 1979:
 	-c SSR
-	-t 
-	-t 
-	-t 
+	-t grav
+	-t thermo
+	-t quantum 
 
 1977:
 	-c CSK
-	-t 
-	-t 
-	-t 
+	-t thermo
+	-t opt
+	-t elec
 
 1976:
 	-c HUN
-	-t 
-	-t 
-	-t 
+	-t mech
+	-t thermo
+	-t opt
 
 1975:
 	-c EDE
-	-t 
-	-t 
-	-t 
+	-t mech
+	-t opt
+	-t mag
 
 1974:
 	-c POL
-	-t 
-	-t 
-	-t 
+	-t nuc
+	-t opt
+	-t thermo
 
 1972:
 	-c ROU
-	-t 
-	-t 
-	-t 
+	-t mech
+	-t thermo
+	-t elec fluid
+	-t opt
 
 1971:
 	-c BGR
-	-t 
-	-t 
-	-t 
+	-t mech
+	-t fluid thermo
+	-t circ
+	-t opt
 
 1970:
 	-c SSR
-	-t 
-	-t 
-	-t 
+	-t mech
+	-t nuc
+	-t elec
+	-t opt
 
 1969:
 	-c CSK
-	-t 
-	-t 
-	-t 
+	-t mech
+	-t thermo
+	-t elec
+	-t opt
 
 1968:
 	-c HUN
-	-t 
-	-t 
-	-t 
+	-t mech
+	-t thermo
+	-t opt
 
 1967:
 	-c POL
-	-t 
-	-t 
-	-t 
+	-t cin
+	-t circ
+	-t thermo
+	-t thermo
 

@@ -1,3 +1,6 @@
+meta:
+	-t Proba de selecție a lotului lărgit
+
 2019:
 	-n Mingea de golf
 	-n Motorul efemer

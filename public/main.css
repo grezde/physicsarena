@@ -14,12 +14,21 @@ a {
 
 a, a:visited {
     color: #0000ff;
-    transition: color 0.1s ease-in-out;
+    transition: color 0.07s ease-in-out;
 }
 
 a:active, a:hover {
     color: #006aff
 }
+
+a.no-color, a.no-color:visited {
+    color: black;
+}
+
+a.no-color:active, a.no-color:hover {
+    color: #333;
+}
+
 
 .country-image {
     border: 2px solid black;
@@ -262,4 +271,22 @@ nav .separator {
         width: 350px;
     }
 
+}
+
+#container.indecs p, #container.indecs h2 {
+    margin-bottom: 10px;
+}
+
+#container.indecs ul {
+    padding-left: 20px;
+}
+
+#container.indecs li {
+    margin-bottom: 4px;
+}
+
+@media(max-width: 500px) {
+    #container.indecs li {
+        margin-bottom: 14px;
+    }
 }

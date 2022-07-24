@@ -41,14 +41,14 @@ const mkdir = path => {
         fs.mkdirSync(path, { recursive: true });
 };
 
-const getCountryImage = cc => {
+const getCountryImage = (cc, pdata) => {
     cc = cc.toLowerCase();
     const transf = {
         wde: 'deu',
         csk: 'cze'
     };
     if(['en', 'ede', 'ssr', 'ygs', 'www'].includes(cc))
-        return `/public/images/c-${cc}.png`;
+        return `${pdata.redirectStart}images/c-${cc}.png`;
     if(transf[cc])
         cc = transf[cc];
     return `https://countryflagsapi.com/png/${cc}`;
@@ -101,7 +101,7 @@ const getTopicName = (pdata, topic) => {
 const htmlFromPdata = (pdata) => {
     const ole = readMyOLE(pdata);
 
-    const getProblemLinks = (identifier, elem='h3') => {
+    const getProblemLinks = (identifier, elem='h3', plural=false) => {
         const getfn = (echar) => {
             let l = '';
             if(fs.existsSync(`../files/${pdata.loc}/${pdata.ol}/${pdata.exam}/${identifier}-${echar}.pdf`))
@@ -116,14 +116,14 @@ const htmlFromPdata = (pdata) => {
             return '';
         return `
             <${elem} class="problem-links">
-                <span class="problem-link-p"><a target="_blank" href="${pl}">${pdata.lmap.problems}</a></span>
-                <span class="problem-link-s"><a target="_blank" href="${sl}">${pdata.lmap.solutions}</a></span>
+                <span class="problem-link-p"><a target="_blank" href="${pl}">${plural ? pdata.lmap.problems : pdata.lmap.problem}</a></span>
+                <span class="problem-link-s"><a target="_blank" href="${sl}">${plural ? pdata.lmap.solutions : pdata.lmap.solution}</a></span>
             </${elem}>
         `;
     };
 
     const problemLi = (identifier, pr) => {
-        const pls = getProblemLinks(identifier, 'h4');
+        const pls = getProblemLinks(identifier, 'h4', false);
         if(pdata.plevel == 0 && pls == '') 
             return '';
 
@@ -151,7 +151,7 @@ const htmlFromPdata = (pdata) => {
             <li class="year-container year-container-${yr.year}">
                 <h1 class="year-title">${yr.year}</h1>
                 ${pdata.cdisp & 1 ? `
-                    <img class="country-image" height="17" src="${console.log(yr), getCountryImage(yr.country)}" />` 
+                    <img class="country-image" height="17" src="${getCountryImage(yr.country, pdata)}" />` 
                 : ''}
                 ${pdata.cdisp & 2 ? `
                     <h3 class="country-name">
@@ -166,14 +166,14 @@ const htmlFromPdata = (pdata) => {
                 ${yr.website ? `
                     <p class="year-website"><a target="_blank" href="${yr.website}">${pdata.lmap.website}</a></p>` 
                 : ''}
-                ${pdata.plevel - pdata.hasGrade == 1 ? getProblemLinks(yr.year) : ''}
+                ${pdata.plevel - pdata.hasGrade == 1 ? getProblemLinks(yr.year, 'h3', true) : ''}
 
                 <ul class="problems-container">
                     ${pdata.hasGrade ? 
                         Object.keys(yr.grades).map(grStr => `
                             <uL class="grade-container">
                                 <h2>${pdata.lmap.group.replace('%', grStr)}</h2>
-                                ${pdata.plevel == 1 ? getProblemLinks(`${yr.year}-${grStr.toLowerCase()}`) : ''}
+                                ${pdata.plevel == 1 ? getProblemLinks(`${yr.year}-${grStr.toLowerCase()}`, 'h3', true) : ''}
                                 ${yr.grades[grStr].problems.map(x => problemLi(`${yr.year}-${grStr.toLowerCase()}-${+x.id+1}`, x)).join('')}
                             </ul>
                         `).join('')
@@ -191,6 +191,7 @@ const writeHTMLFromPdata = (pdata, odata) => {
     let str = htmlFromPdata(pdata);
     const ole = readMyOLE(pdata);
     const myo = odata.filter(x => x.name == pdata.ol)[0];
+    const mye = myo.exams.filter(x => x.code != pdata.exam).filter(e => e.locales.includes(pdata.loc));
     const locales = myo.exams.filter(e => e.code == pdata.exam)[0].locales.split(' ');
     //const exams = [...new Set([].concat(...odata.map(o => o.exams.filter(e => e.locales.includes(pdata.loc)).map(e => e.code))))];
     const cbinput = (menu, name) => `
@@ -208,20 +209,20 @@ const writeHTMLFromPdata = (pdata, odata) => {
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>${pdata.lmap.title.replace('%', myo.shortname)}</title>
         <link rel="stylesheet" href="${pdata.redirectStart}main.css" />
-        <!-- This page was generated from raw olympiad data -->
+        <link rel="icon" href="${pdata.redirectStart}images/logo-${pdata.loc}.png" type="image/x-icon" />
     </head>
     <body>
         <nav id="top">
-            <h1>${pdata.lmap.physicsarena}</h1>
+            <h1><a class="no-color" href="${pdata.redirectStart}${pdata.loc}">${pdata.lmap.physicsarena}</a></h1>
             <div class="center"></div>
             ${locales.length >= 2 ? `
                 <p>${pdata.lmap.language}</p>
                 <p>
-                    <img class="language-image" height="14" src="${getCountryImage(pdata.loc)}" /> 
+                    <img class="language-image" height="14" src="${getCountryImage(pdata.loc, pdata)}" /> 
                 </p>
                 ${locales.filter(l => l != pdata.loc).map(l => `
                     <p><a href="${pdata.redirectStart}${l}/${pdata.ol}/${pdata.exam}">
-                        <img class="language-image" height="14" src="${getCountryImage(l)}" /> 
+                        <img class="language-image" height="14" src="${getCountryImage(l, pdata)}" /> 
                     </a></p>
                 `).join('')}
                 <p class="separator"></p>    
@@ -232,9 +233,9 @@ const writeHTMLFromPdata = (pdata, odata) => {
         <nav id="bot">
             <p>${pdata.lmap['oth-title']}</p>
             
-            ${myo.exams.length > 1 ? `
+            ${mye.length > 0 ? `
                 <p class="separator"></p>
-                ${myo.exams.filter(x => x.code != pdata.exam).map(x => `
+                ${mye.map(x => `
                     <p><a class="a-button" href="${pdata.redirectStart}${pdata.loc}/${pdata.ol}/${x.code}">${pdata.lmap[`e-${x.code}`]}</a></p>
                 `)}
             ` : ''}
@@ -276,11 +277,12 @@ const writeHTMLFromPdata = (pdata, odata) => {
 </html>
 `;
 
-    mkdir(`../public/${pdata.loc}/${pdata.ol}/${pdata.exam}`);
-    fs.writeFileSync(`../public/${pdata.loc}/${pdata.ol}/${pdata.exam}/index.html`, str);
+    mkdir(`../${pdata.outputDir}/${pdata.loc}/${pdata.ol}/${pdata.exam}`);
+    fs.writeFileSync(`../${pdata.outputDir}/${pdata.loc}/${pdata.ol}/${pdata.exam}/index.html`, str);
     return str;
 };
 
+/*
 const argv = process.argv.slice(2);
 if(argv.length > 0) {
     const processData = {
@@ -292,7 +294,7 @@ if(argv.length > 0) {
     };
     writeHTMLFromPdata(processData);
 }
-
+*/
 module.exports = {
-    writeHTMLFromPdata
+    writeHTMLFromPdata, getCountryImage, readMyOLE
 };

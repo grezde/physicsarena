@@ -1,2 +1,7 @@
 /archive
 /files
+util.sh
+/files_old
+/build
+/temp
+/public
